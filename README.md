@@ -1,3 +1,3 @@
 # infiniti
 
-# Readme file
+# Readme file (more details later)
