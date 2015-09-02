@@ -3,19 +3,19 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        concat: {
-            dist: {
-                src: [
-                    'src/js/**/*.js'
-                ],
-                dest: 'public/js/production.js',
-            }
-        },
+        // concat: {
+        //     dist: {
+        //         src: [
+        //             'src/js/**/*.js'
+        //         ],
+        //         dest: 'public/js/production.js',
+        //     }
+        // },
 
         uglify: {
             build: {
-                src: 'public/js/production.js',
-                dest: 'public/js/production.min.js'
+                src: 'public/js/portfolio/portfolio-main.js',
+                dest: 'public/js/portfolio-main.min.js'
             }
         },
 
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'img/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'img/public'
+                    dest: 'public/img'
                 }]
             }
         },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-            all: ['gruntfile.js', 'src/js/portfolio/*.js']
+            all: ['gruntfile.js', 'public/js/portfolio/*.js']
         },
 
         scsslint: {
@@ -51,8 +51,9 @@ module.exports = function(grunt) {
 
         watch: {
             scripts: {
-                files: ['src/js/portfolio/*.js'],
-                tasks: ['jshint', 'concat', 'uglify'],
+                files: ['public/js/portfolio/*.js'],
+                // tasks: ['jshint', 'concat', 'uglify'],
+                tasks: ['jshint', 'uglify'],
                 options: {
                     spawn: false,
                 },

@@ -10,19 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        
-        <!-- <link rel="stylesheet" href="public/css/vendor/bootstrap/bootstrap.min.css"> -->
         <link rel="stylesheet" href="public/css/theme.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <!-- <link rel="stylesheet" href="src/css/vendor/bootstrap//bootstrap-theme.min.css">
-        <link rel="stylesheet" href="src/css/vendor/bootstrap//main.css"> -->
-
-        <script src="src/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="public/js/vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+       
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -54,7 +44,7 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div id="home" class="jumbotron">
       <div class="container">
         <h1>Hello, world!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
@@ -84,14 +74,96 @@
 
       <hr>
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <!-- third section - Services -->
+        <div id="services" class="pad-section">
+          <div class="container">
+            <h2 class="text-center">Our Services</h2> <hr />
+            <div class="row text-center">
+              <div class="col-sm-3 col-xs-6">
+                <i class="glyphicon glyphicon-cloud"> </i>
+                <h4>Service 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                <i class="glyphicon glyphicon-leaf"> </i>
+                <h4>Service 2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                <i class="glyphicon glyphicon-phone-alt"> </i>
+                <h4>Service 3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                <i class="glyphicon glyphicon-bullhorn"> </i>
+                <h4>Service 4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /third section -->
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <!-- fourth section - Information -->
+        <div id="information" class="pad-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Additional information</h2>
+                  </div>
+                  <div class="panel-body lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2 class="panel-title">Additional information</h2>
+                  </div>
+                  <div class="panel-body lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa. Duis euismod, augue et tempus consequat, lorem mauris porttitor quam, consequat ultricies mauris mi a metus. Phasellus congue, leo sed ultricies tristique, nunc libero tempor ligula, at varius mi nibh in nisi. Aliquam erat volutpat. Maecenas rhoncus, neque facilisis rhoncus tempus, elit ligula varius dui, quis amet. 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /fourth section -->
 
-        <script src="js/main.js"></script>
+        <!-- fifth section -->
+        <div id="services" class="pad-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <h3>Parallax scrolling effect is in action</h3>
+                <h4>The next is the address on Google maps</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /fifth section -->
+
+        <!-- footer -->
+        <footer>
+          <hr />
+          <div class="container">
+            <p class="text-right">Copyright &copy; Your Company 2014</p>
+          </div>
+        </footer>
+        <!-- /footer -->
+
+
+    </div> <!-- /container 
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
+        <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="public/js/vendor/stellar/jquery.stellar.min.js"></script>
+        <script src="public/js/portfolio/portfolio-main.min.js"></script>
+        
     </body>
 </html>
