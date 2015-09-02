@@ -12,12 +12,12 @@ module.exports = function(grunt) {
         //     }
         // },
 
-        uglify: {
-            build: {
-                src: 'public/js/portfolio/portfolio-main.js',
-                dest: 'public/js/portfolio-main.min.js'
-            }
-        },
+        // uglify: {
+        //     build: {
+        //         src: 'public/js/portfolio/portfolio-main.js',
+        //         dest: 'public/js/portfolio/portfolio-main.min.js'
+        //     }
+        // },
 
         imagemin: {
             dynamic: {
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
             scripts: {
                 files: ['public/js/portfolio/*.js'],
                 // tasks: ['jshint', 'concat', 'uglify'],
-                tasks: ['jshint', 'uglify'],
+                tasks: ['jshint'],
                 options: {
                     spawn: false,
                 },
