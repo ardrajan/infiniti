@@ -32,11 +32,15 @@
         max-width: 100%;
         height: auto;
     }
+
+    .btn {
+        margin-top: 40px;
+    }
 }
 
 #recent-projects {
     background: url(../img/007.png) repeat;
-    background-color: $light-grey;
+    background-color: $white;
 
     h1.text-uppercase {
         margin: 70px 0 60px 0;
@@ -61,6 +65,34 @@
     .project-details {
         font-weight: 400;
         padding: 15px;
+    }
+}
+
+#tools {
+    background: url(../img/009.jpg) no-repeat center center fixed;;
+    background-size: cover;
+
+    .wrapper {
+        padding: 80px 20px 240px 20px;
+    }
+
+    h1.text-uppercase {
+        margin-bottom: 35px;
+    }
+
+    .skills-section {
+        border-bottom: 1px solid rgba($dark-grey, 0.2);
+        overflow: auto;
+        padding-top: 35px;
+
+        .h2 {
+            padding-left: 46px;
+        }
+
+        .skills {
+            margin-bottom: 25px;
+            padding: 0 40px 0 0;
+        }
     }
 }
 
