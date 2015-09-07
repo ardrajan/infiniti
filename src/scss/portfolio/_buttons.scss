@@ -1,0 +1,12 @@
+// -----------------------------
+// Overrides for buttons
+// -----------------------------
+
+.btn {
+    font-size: $btn-font-size;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: none;
+    }
+}

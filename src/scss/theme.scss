@@ -4,6 +4,7 @@
 
 // Core variables and mixins
 @import 'bootstrap/variables';
+@import 'portfolio/variables'; // overrides
 @import 'bootstrap/mixins';
 
 // Reset and dependencies
@@ -13,12 +14,17 @@
 
 // Core CSS
 @import 'bootstrap/scaffolding';
+
 @import 'bootstrap/type';
+@import 'portfolio/type'; // overrides
+
 @import 'bootstrap/code';
 @import 'bootstrap/grid';
 @import 'bootstrap/tables';
 @import 'bootstrap/forms';
+
 @import 'bootstrap/buttons';
+@import 'portfolio/buttons'; // overrides
 
 // Components
 @import 'bootstrap/component-animations';
@@ -53,8 +59,5 @@
 @import 'bootstrap/utilities';
 @import 'bootstrap/responsive-utilities';
 
-// Custom Overrides
-@import 'portfolio/variables';
-
-// Special Theme-related styles
+// Theme-related styles
 @import 'portfolio/portfolio-theme';

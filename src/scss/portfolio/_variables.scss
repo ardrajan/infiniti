@@ -1,4 +1,48 @@
+// -----------------------------
 // Overrides for variables
+// -----------------------------
 
-$dark-grey: #3f3f3f;
-$white: #fdfdfd;
+// Portfolio colors
+$black:         #000;
+$dark-green:    #74975b;
+$dark-grey:     #3f3f3f;
+$light-grey:    #dee0e3;
+$white:         #fdfdfd;
+
+// Bootstrap button overrides
+$btn-primary-color:              $dark-green;
+$btn-primary-bg:                 transparent;
+$btn-primary-border:             $dark-green;
+
+// Bootstrap overrides for `<body>`
+$body-bg:               $white;
+// Bootstrap overrides for text color on `<body>`
+$text-color:            $dark-grey;
+
+// Bootstrap typography overrides
+$font-family-sans-serif:  'Open Sans', sans-serif;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+// $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.28)); // ~32px
+$font-size-h2:            floor(($font-size-base * 1.7)); // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.42)); // ~20px
+$font-size-h4:            floor(($font-size-base * 1.28)); // ~18px
+
+$font-weight-h1:          700;
+$font-weight-h2:          500;
+$font-weight-h3:          400;
+$font-weight-h4:          600;
+
+$headings-font-family:    'Oswald', sans-serif;
+$h3-font-family:          $font-family-sans-serif;
+$h4-font-family:          $font-family-sans-serif;
+$headings-color:          $dark-grey;
+
+// Bootstrap buttons overrides
+$btn-font-weight:         bold;
+$btn-font-size:           floor(($font-size-base * 1.14)); // ~16px
+
