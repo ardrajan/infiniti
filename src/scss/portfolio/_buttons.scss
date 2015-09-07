@@ -6,8 +6,18 @@
     font-size: $btn-font-size;
     margin: 40px 0;
     text-transform: uppercase;
+    @include transition(all $default-transition);
 
     &:focus {
         outline: none;
+    }
+}
+
+.btn-primary {
+    &:hover,
+    &:active {
+        color: darken($btn-primary-color, 20%);;
+        background-color: darken($btn-primary-bg, 10%);
+        border-color: darken($btn-primary-border, 12%);
     }
 }

@@ -46,3 +46,6 @@ $headings-color:          $dark-grey;
 $btn-font-weight:         bold;
 $btn-font-size:           floor(($font-size-base * 1.14)); // ~16px
 
+// Transitions
+$default-transition: .15s ease-out;
+
