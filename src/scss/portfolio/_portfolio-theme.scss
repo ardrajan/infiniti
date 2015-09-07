@@ -39,8 +39,11 @@
 }
 
 #recent-projects {
-    background: url(../img/007.png) repeat;
     background-color: $white;
+}
+
+.cardboard {
+    background: url(../img/007.png) repeat;
 
     h1.text-uppercase {
         margin: 70px 0 60px 0;
@@ -93,6 +96,16 @@
             margin-bottom: 25px;
             padding: 0 40px 0 0;
         }
+    }
+}
+
+#contact {
+    background-color: $light-grey;
+
+    .social-media {
+        color: $dark-green;
+        display: block;
+        margin: 50px 0;
     }
 }
 
