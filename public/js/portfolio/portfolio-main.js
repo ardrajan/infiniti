@@ -14,9 +14,11 @@
         positionProperty: 'transfade',
     });
 
+    console.log("hi");
     // Get the JSON
     var projectData;
     $.getJSON('public/data/projects.json', function(data) {
+        // Render the template for the projects grid
         projectData = data;
         console.log(projectData);
 
@@ -32,26 +34,4 @@
         // Add the compiled html to the page
         $('.projects-grid').html(theCompiledHtml);
     });
-    
-
-    // // Grab the template script
-    // var theTemplateScript = $("#project-card-template").html();
-
-    // // Compile the template
-    // var theTemplate = Handlebars.compile(theTemplateScript);
-
-    // // Define our data object
-    // // var context={
-    // // "city": "London",
-    // // "street": "Baker Street",
-    // // "number": "221B"
-    // // };
-
-    // // // Pass our data to the template
-    // var theCompiledHtml = theTemplate(projectData);
-
-    // // Add the compiled html to the page
-    // // $('.content-placeholder').html(theCompiledHtml);
-    // $('.projects-grid').html(theCompiledHtml);
-
 }(jQuery));

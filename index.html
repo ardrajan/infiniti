@@ -80,7 +80,7 @@
 
                             <div class="detailed-description">
                                 <p class="h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, facere. Consequatur amet, odio iure distinctio id ducimus deleniti esse vitae. Sunt veritatis dolor ullam aliquam earum alias illum quibusdam voluptatibus blanditiis doloribus dolorem, temporibus perferendis voluptates distinctio, pariatur eum nam facilis eos aut ducimus! Labore quo expedita eveniet officia blanditiis, doloremque, nulla enim voluptas, vero, illum earum reiciendis magni soluta! Aliquid, eius, architecto. Velit ipsam itaque reprehenderit possimus distinctio soluta natus voluptate accusamus sit harum saepe pariatur id porro quos, blanditiis et obcaecati ipsum facilis cupiditate iusto nisi dolores neque minima! Ullam sunt magnam dolorum hic, consequuntur facere, dolorem. Magni!</p>
-                                <p class="h2"><span class="text-uppercase">Role:</span> Lead UX Designer</p>
+                                <p class="h2"><span class="text-uppercase">Role:</span> Work Role</p>
                                 <p class="h2 text-uppercase">Work done on this project</p>
                                 <ul class="work-description">
                                     <li>
@@ -96,7 +96,7 @@
                                         <p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
                                     </li>
                                 </ul>
-                                <p class="h2"><span class="text-uppercase">External site:</span> <a href="">www.ardrajan.com</a></p>
+                                <p class="h2"><span class="text-uppercase">External site:</span>   <a href="">www.ardrajan.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -269,12 +269,13 @@
 
     <!-- /container 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <!-- Handlebars template for the cards in Recent Projects -->
         <script id="project-card-template" type="text/x-handlebars-template">
             {{#each portfolioProjects}}
                 <div class="col-sm-6 col-md-4">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src={{smallImage}} alt={{title}}>
+                            <img src={{thumbnail}} alt={{title}}>
                             <span class="h4 text-uppercase">{{title}}</span>
                         </div>
                         <div class="project-details">
@@ -284,7 +285,6 @@
                 </div>
             {{/each}}
         </script>
-
         <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
         <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
         <script src="public/js/vendor/stellar/jquery.stellar.min.js"></script>
