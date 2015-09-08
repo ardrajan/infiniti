@@ -51,6 +51,8 @@
 
 // Components w/ JavaScript
 @import 'bootstrap/modals';
+@import 'portfolio/modals'; // overrides
+
 @import 'bootstrap/tooltip';
 @import 'bootstrap/popovers';
 @import 'bootstrap/carousel';

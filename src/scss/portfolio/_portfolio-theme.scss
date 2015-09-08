@@ -98,7 +98,8 @@
         .h2 {
             padding-left: 46px;
         }
-
+        
+        // Styles for list of skills
         .skills {
             margin-bottom: 25px;
             padding: 0 40px 0 0;
@@ -106,14 +107,31 @@
     }
 }
 
+// Styles for contact section
 #contact {
     background-color: $light-grey;
     padding-bottom: 50px;
-
+    
+    // Styles for the social media icons from font awesome
     .social-media {
         color: $dark-green;
         display: block;
         margin: 50px 0;
+    }
+}
+
+// Class for detailed description in the overlay card
+.detailed-description {
+    padding: 0 50px 40px 50px;
+
+    h2,
+    .h2 {
+        line-height: 35px;
+        padding-top: 40px;
+    }
+
+    .work-description {
+        padding: 0 0 0 19px;
     }
 }
 

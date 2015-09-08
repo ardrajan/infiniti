@@ -9,6 +9,9 @@ $dark-grey:     #3f3f3f;
 $light-grey:    #dee0e3;
 $white:         #fdfdfd;
 
+// Misc
+$border-radius-none:    0;
+
 // Bootstrap button overrides
 $btn-primary-color:              $dark-green;
 $btn-primary-bg:                 transparent;
@@ -48,4 +51,30 @@ $btn-font-size:           floor(($font-size-base * 1.14)); // ~16px
 
 // Transitions
 $default-transition: .15s ease-out;
+
+// Bootstrap modals overrides
+// Padding applied to the modal body
+$modal-inner-padding:           0;
+// Padding applied to the modal title
+$modal-title-padding:           80px 0 0 0;
+// Modal title line-height
+// $modal-title-line-height:     $line-height-base !default;
+// Background color of modal content area
+$modal-content-bg:                             $white; //
+// Modal content border color
+$modal-content-border-color:                   none; //
+// Modal content border color **for IE8**
+$modal-content-fallback-border-color:          none; //
+// Modal backdrop background color
+$modal-backdrop-bg:             #000 !default;
+// Modal backdrop opacity
+$modal-backdrop-opacity:        .5 !default; 
+// Modal header border color
+$modal-header-border-color:     none; //
+// Modal footer border color
+$modal-footer-border-color:     $modal-header-border-color !default;
+// Modal large size
+$modal-lg:                      940px;
+// Changing modal backdrop z-index so that the modal appears properly
+$zindex-modal-background:       0;
 

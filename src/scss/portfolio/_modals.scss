@@ -1,0 +1,22 @@
+// -----------------------------
+// Overrides for variables
+// -----------------------------
+
+// Container that the modal scrolls within
+.modal {
+    // display: block;
+}
+
+// Actual modal
+.modal-content {
+    border-radius: $border-radius-none;
+}
+
+// Modal header
+// Close icon
+.modal-header .close {
+  font-size: 60px;
+  left: 90%;
+  position: absolute;
+  opacity: 1;
+}
