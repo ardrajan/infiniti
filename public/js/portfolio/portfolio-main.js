@@ -18,27 +18,40 @@
     var projectData;
     $.getJSON('public/data/projects.json', function(data) {
         projectData = data;
+        console.log(projectData);
+
+        // Grab the template script
+        var theTemplateScript = $("#project-card-template").html();
+
+        // Compile the template
+        var theTemplate = Handlebars.compile(theTemplateScript);
+
+        // // Pass our data to the template
+        var theCompiledHtml = theTemplate(projectData);
+
+        // Add the compiled html to the page
+        $('.projects-grid').html(theCompiledHtml);
     });
-    console.log(projectData);
+    
 
-    // Grab the template script
-    var theTemplateScript = $("#project-card-template").html();
+    // // Grab the template script
+    // var theTemplateScript = $("#project-card-template").html();
 
-    // Compile the template
-    var theTemplate = Handlebars.compile(theTemplateScript);
+    // // Compile the template
+    // var theTemplate = Handlebars.compile(theTemplateScript);
 
-    // Define our data object
-    // var context={
-    // "city": "London",
-    // "street": "Baker Street",
-    // "number": "221B"
-    // };
+    // // Define our data object
+    // // var context={
+    // // "city": "London",
+    // // "street": "Baker Street",
+    // // "number": "221B"
+    // // };
 
-    // // Pass our data to the template
-    // var theCompiledHtml = theTemplate(context);
+    // // // Pass our data to the template
+    // var theCompiledHtml = theTemplate(projectData);
 
-    // Add the compiled html to the page
-    // $('.content-placeholder').html(theCompiledHtml);
-    $('.projects-grid').html(theTemplate);
+    // // Add the compiled html to the page
+    // // $('.content-placeholder').html(theCompiledHtml);
+    // $('.projects-grid').html(theCompiledHtml);
 
 }(jQuery));

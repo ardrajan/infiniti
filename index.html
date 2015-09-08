@@ -198,17 +198,19 @@
     <!-- /container 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
         <script id="project-card-template" type="text/x-handlebars-template">
-            <div class="col-sm-6 col-md-4">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src={{smallImage}} alt="">
-                        <span class="h4 text-uppercase">{{title}}</span>
-                    </div>
-                    <div class="project-details">
-                        <p>{{blurb}}</p>
+            {{#each portfolioProjects}}
+                <div class="col-sm-6 col-md-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src={{smallImage}} alt="">
+                            <span class="h4 text-uppercase">{{title}}</span>
+                        </div>
+                        <div class="project-details">
+                            <p>{{blurb}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {{/each}}
         </script>
 
         <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
