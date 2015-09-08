@@ -82,112 +82,17 @@
             <div class="container">
                 <div class="row">
                     <h1 class="text-uppercase text-center">Recent projects</h1>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4 text-uppercase">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4 text-uppercase">Pathways of Progress</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="public/img/008.png" alt="">
-                                <span class="h4">DIBELS / IDEL</span>
-                            </div>
-                            <div class="project-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
-                            </div>
+                    <div class="projects-grid">
+                        <!-- <div class="col-sm-6 col-md-4">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="public/img/008.png" alt="">
+                                    <span class="h4 text-uppercase">DIBELS / IDEL</span>
+                                </div>
+                                <div class="project-details">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consectetur quaerat, facilis dolores eos provident.</p>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -290,13 +195,26 @@
             </div>
         </footer> <!-- Contact -->
 
-    </div> <!-- /container 
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- /container 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <script id="project-card-template" type="text/x-handlebars-template">
+            <div class="col-sm-6 col-md-4">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src={{smallImage}} alt="">
+                        <span class="h4 text-uppercase">{{title}}</span>
+                    </div>
+                    <div class="project-details">
+                        <p>{{blurb}}</p>
+                    </div>
+                </div>
+            </div>
+        </script>
+
         <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
         <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
         <script src="public/js/vendor/stellar/jquery.stellar.min.js"></script>
+        <script src="public/js/vendor/handlebars/handlebars-v4.0.2.js"></script>
         <script src="public/js/portfolio/portfolio-main.js"></script>
         
     </body>
