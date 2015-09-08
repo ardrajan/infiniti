@@ -58,12 +58,23 @@
         display: block;
         padding: 0 15px;
         position: absolute;
-        top: 52%;
+        top: 165px;
     }
 
     .project-details {
         font-weight: 400;
         padding: 15px;
+    }
+
+    // Hover state for the card
+    &:hover {
+        background: $dark-grey;
+        cursor: pointer;
+        
+        // Change color of the blurb
+        .project-details {
+            color: $white;
+        }
     }
 }
 
