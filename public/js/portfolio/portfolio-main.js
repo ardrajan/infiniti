@@ -20,7 +20,7 @@
     $.getJSON('public/data/projects.json', function(data) {
         // Render the template for the projects grid
         projectData = data;
-        console.log(projectData);
+        console.log(projectData.portfolioProjects[0]);
 
         // Grab the template script
         var theTemplateScript = $("#project-card-template").html();
@@ -33,5 +33,11 @@
 
         // Add the compiled html to the page
         $('.projects-grid').html(theCompiledHtml);
+
+        $('.projects-grid').on('click', '.project-card', function(e){
+            var index = $(this).parent().index();
+            console.log(index);
+            console.log(projectData.portfolioProjects[index]);
+        });
     });
 }(jQuery));
