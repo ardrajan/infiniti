@@ -61,7 +61,7 @@
         top: 165px;
     }
 
-    .project-details {
+    .project-blurb {
         font-weight: 400;
         padding: 15px;
     }
@@ -72,7 +72,7 @@
         cursor: pointer;
         
         // Change color of the blurb
-        .project-details {
+        .project-blurb {
             color: $white;
         }
     }
@@ -121,7 +121,7 @@
 }
 
 // Class for detailed description in the overlay card
-.detailed-description {
+.project-details {
     padding: 0 50px 40px 50px;
 
     h2,
@@ -155,7 +155,7 @@
             top: 80%;
         }
 
-        .project-details {
+        .project-blurb {
             left: 250px;
             position: absolute;
             top: 0;

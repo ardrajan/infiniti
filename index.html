@@ -35,11 +35,11 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h1 class="modal-title text-center text-uppercase" id="myModalLabel">Modal title</h1>
+                            <h1 class="modal-title text-center text-uppercase" id="projectCardModalLabel">Modal title</h1>
                         </div>
                         <div class="modal-body">
                             <!-- Carousel -->
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -78,25 +78,8 @@
                                 </a>
                             </div> <!-- Carousel -->
 
-                            <div class="detailed-description">
-                                <p class="h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, facere. Consequatur amet, odio iure distinctio id ducimus deleniti esse vitae. Sunt veritatis dolor ullam aliquam earum alias illum quibusdam voluptatibus blanditiis doloribus dolorem, temporibus perferendis voluptates distinctio, pariatur eum nam facilis eos aut ducimus! Labore quo expedita eveniet officia blanditiis, doloremque, nulla enim voluptas, vero, illum earum reiciendis magni soluta! Aliquid, eius, architecto. Velit ipsam itaque reprehenderit possimus distinctio soluta natus voluptate accusamus sit harum saepe pariatur id porro quos, blanditiis et obcaecati ipsum facilis cupiditate iusto nisi dolores neque minima! Ullam sunt magnam dolorum hic, consequuntur facere, dolorem. Magni!</p>
-                                <p class="h2"><span class="text-uppercase">Role:</span> Work Role</p>
-                                <p class="h2 text-uppercase">Work done on this project</p>
-                                <ul class="work-description">
-                                    <li>
-                                        <p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                                    </li>
-                                    <li>
-                                        <p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                                    </li>
-                                    <li>
-                                        <p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                                    </li>
-                                    <li>
-                                        <p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-                                    </li>
-                                </ul>
-                                <p class="h2"><span class="text-uppercase">External site:</span>   <a href="">www.ardrajan.com</a></p>
+                            <div class="project-details">
+                                
                             </div>
                         </div>
                     </div>
@@ -159,7 +142,7 @@
         <section id="recent-projects" class="cardboard">
             <div class="container">
                 <div class="row">
-                    <h1 class="text-uppercase text-center">Recent projects</h1>
+                    <h1 class="text-uppercase text-center">Lorem ipsum</h1>
                     <div class="projects-grid">
                         </div>
                     </div>
@@ -173,10 +156,10 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="wrapper">
-                            <h1 class="text-uppercase text-center">Tools in my arsenal</h1>
+                            <h1 class="text-uppercase text-center">Lorem ipsum</h1>
                             <div class="skills-section">
                                 <div class="col-sm-6 col-md-6">
-                                    <span class="h2">Design</span>
+                                    <span class="h2">Lorem</span>
                                 </div>
                                 <div class="col-sm-6 col-md-6">
                                     <ul class="skills">
@@ -198,7 +181,7 @@
 
                             <div class="skills-section">
                                 <div class="col-sm-6 col-md-6">
-                                    <span class="h2">Design</span>
+                                    <span class="h2">Lorem</span>
                                 </div>
                                 <div class="col-sm-6 col-md-6">
                                     <ul class="skills">
@@ -220,7 +203,7 @@
 
                             <div class="skills-section">
                                 <div class="col-sm-6 col-md-6">
-                                    <span class="h2">Design</span>
+                                    <span class="h2">Lorem</span>
                                 </div>
                                 <div class="col-sm-6 col-md-6">
                                     <ul class="skills">
@@ -274,12 +257,28 @@
                             <img src={{thumbnail.image}} alt={{thumbnail.alt}}>
                             <span class="h4 text-uppercase">{{title}}</span>
                         </div>
-                        <div class="project-details">
+                        <div class="project-blurb">
                             <p>{{blurb}}</p>
                         </div>
                     </div>
                 </div>
             {{/each}}
+        </script>
+        <script id="project-card-details-template" type="text/x-handlebars-template">
+            <p class="h2"><span class="project-description">{{description}}</span></p>
+                <p class="h2"><span class="text-uppercase">Role:</span><span class="text-capitalize"> {{role}}</span></p>
+                <p class="h2 text-uppercase">Work done on this project</p>
+                <ul class="work-description">
+                    {{#each work}}
+                        <li>
+                            <p class="h3">{{bulletPoint}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+                {{#if website}}
+                    <p class="h2"><span class="text-uppercase">External site:</span><a class="text-lowercase" href={{website.url}}>   {{website.sitename}}</a></p>
+                {{/if}}
+                
         </script>
         <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
         <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
