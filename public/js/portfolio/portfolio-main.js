@@ -15,7 +15,7 @@
     });
 
     console.log("hi");
-    // Get the JSON
+    // Get the JSON data
     var projectData;
     $.getJSON('public/data/projects.json', function(data) {
         // Render the template for the projects grid
@@ -34,10 +34,9 @@
         // Add the compiled html to the page
         $('.projects-grid').html(theCompiledHtml);
 
+        // On click event for getting JSON data corresponding clicked element
         $('.projects-grid').on('click', '.project-card', function(e){
             var index = $(this).parent().index();
-            console.log(index);
-            console.log(projectData.portfolioProjects[index]);
         });
     });
 }(jQuery));

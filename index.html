@@ -30,7 +30,7 @@
         <!-- Modal - Recent Projects -->
         <section id="modal-recent-projects">
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="projectCardModal" tabindex="-1" role="dialog" aria-labelledby="projectCardModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -115,10 +115,6 @@
                             <h1 class="text-uppercase text-center">Hi. I am Dharmarajan Ayakkad.</h1>
                             <h2 class="text-uppercase text-center">I care about <span class="emphasis">human</span> experiences...</h2>
                             <h3 class=" text-center">...and I work at the point where people, design, art and technology converge to create compelling stories and delightful experiences.</h3>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                              Launch demo modal
-                            </button>
                         </header>
                     </div>
                 </div>
@@ -273,7 +269,7 @@
         <script id="project-card-template" type="text/x-handlebars-template">
             {{#each portfolioProjects}}
                 <div class="col-sm-6 col-md-4">
-                    <div class="project-card">
+                    <div class="project-card" data-toggle="modal" data-target="#projectCardModal">
                         <div class="project-image">
                             <img src={{thumbnail.image}} alt={{thumbnail.alt}}>
                             <span class="h4 text-uppercase">{{title}}</span>
