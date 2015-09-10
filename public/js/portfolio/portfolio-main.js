@@ -20,11 +20,16 @@
     var modalBody = $('.modal-body');
 
     // Get the JSON data
-    var projectData;
+    var jsonURL = 'public/data/projects.json';
 
-    $.getJSON('public/data/projects.json', function(data) {
-        // Render the template for the projects grid
-        projectData = data;
+    $.getJSON(jsonURL, function(){})
+    // JSON fetch is unsuccessful
+    .fail(function() {
+        console.log('JSON fetch failed');
+    })
+    // JSON fetch is successful
+    .done(function(projectData) {
+        console.log('JSON fetch successful');
 
         // Grab the template script
         var projectCardTemplateScript = $("#project-card-template").html();
@@ -32,19 +37,19 @@
         // Compile the template
         var projectCardTemplate = Handlebars.compile(projectCardTemplateScript);
 
-        // // Pass our data to the template
+        //Pass our data to the template
         var projectCardCompiledHtml = projectCardTemplate(projectData);
 
         // Add the compiled html to the page
         projectsGrid.html(projectCardCompiledHtml);
 
         // On click event for getting JSON data corresponding clicked element
-        projectsGrid.on('click', '.project-card', function(e){
+        projectsGrid.on('click', '.project-card', function(e) {
             // Get the index of the parent of the clicked element
             var index = $(this).parent().index();
             // Get data corresponding to the clicked element
             var clickedCardData = projectData.portfolioProjects[index];
-             // Project title
+             // Set project title
             modalTitle.text(clickedCardData.title);
 
             // Grab the template script for the modal body
@@ -53,7 +58,7 @@
             // Compile the template
             var projectCardDetailsTemplate = Handlebars.compile(projectCardDetailsTemplateScript);
 
-            // // Pass our data to the template (corresponding to clicked card)
+            // Pass our data to the template (corresponding to clicked card)
             var projectCardDetailsCompiledHtml = projectCardDetailsTemplate(clickedCardData);
 
             // Add the compiled html to the modal body
