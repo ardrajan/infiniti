@@ -14,13 +14,17 @@
         positionProperty: 'transfade',
     });
 
-    console.log("hi");
+    // Variables for optimization
+    var projectsGrid = $('.projects-grid');
+    var modalTitle = $('.modal-title');
+    var modalBody = $('.modal-body');
+
     // Get the JSON data
     var projectData;
+
     $.getJSON('public/data/projects.json', function(data) {
         // Render the template for the projects grid
         projectData = data;
-        console.log(projectData.portfolioProjects[0]);
 
         // Grab the template script
         var projectCardTemplateScript = $("#project-card-template").html();
@@ -32,24 +36,19 @@
         var projectCardCompiledHtml = projectCardTemplate(projectData);
 
         // Add the compiled html to the page
-        $('.projects-grid').html(projectCardCompiledHtml);
+        projectsGrid.html(projectCardCompiledHtml);
 
         // On click event for getting JSON data corresponding clicked element
-        $('.projects-grid').on('click', '.project-card', function(e){
+        projectsGrid.on('click', '.project-card', function(e){
             // Get the index of the parent of the clicked element
             var index = $(this).parent().index();
             // Get data corresponding to the clicked element
             var clickedCardData = projectData.portfolioProjects[index];
              // Project title
-            $('.modal-title').text(clickedCardData.title);
-            // Project description
-            $('.project-description').text(clickedCardData.description);
-            // Role on project
-            $('.role').text(clickedCardData.role);
+            modalTitle.text(clickedCardData.title);
 
             // Grab the template script for the modal body
             var projectCardDetailsTemplateScript = $("#project-card-details-template").html();
-            console.log(projectCardDetailsTemplateScript);
 
             // Compile the template
             var projectCardDetailsTemplate = Handlebars.compile(projectCardDetailsTemplateScript);
@@ -58,7 +57,7 @@
             var projectCardDetailsCompiledHtml = projectCardDetailsTemplate(clickedCardData);
 
             // Add the compiled html to the modal body
-            $('.modal-body').html(projectCardDetailsCompiledHtml);
+            modalBody.html(projectCardDetailsCompiledHtml);
         });
     });
 }(jQuery));

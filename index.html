@@ -203,9 +203,7 @@
             </div>
         </footer> <!-- Contact -->
 
-    <!-- /container 
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
-        <!-- Handlebars template for the cards in Recent Projects -->
+        <!-- Handlebars template for the project cards grid in Recent Projects -->
         <script id="project-card-template" type="text/x-handlebars-template">
             {{#each portfolioProjects}}
                 <div class="col-sm-6 col-md-4">
@@ -221,6 +219,8 @@
                 </div>
             {{/each}}
         </script>
+
+        <!-- Handlebars template for the details in the modal body -->
         <script id="project-card-details-template" type="text/x-handlebars-template">
             <!-- Carousel -->
             <div id="carousel-portfolio" class="carousel slide" data-interval="false">
@@ -251,6 +251,8 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div> <!-- Carousel -->
+
+            <!-- Project details -->
             <div class="project-details">
                 <p class="h2"><span class="project-description">{{description}}</span></p>
                 <p class="h2"><span class="text-uppercase">Role:</span><span class="text-capitalize"> {{role}}</span></p>
@@ -265,7 +267,7 @@
                 {{#if website}}
                     <p class="h2"><span class="text-uppercase">External site:</span><a class="text-lowercase" href={{website.url}}>   {{website.sitename}}</a></p>
                 {{/if}}
-            </div>
+            </div> <!-- Project details -->
         </script>
         <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
         <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
