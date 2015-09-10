@@ -47,18 +47,18 @@
             // Role on project
             $('.role').text(clickedCardData.role);
 
-            // Grab the template script
+            // Grab the template script for the modal body
             var projectCardDetailsTemplateScript = $("#project-card-details-template").html();
             console.log(projectCardDetailsTemplateScript);
 
             // Compile the template
             var projectCardDetailsTemplate = Handlebars.compile(projectCardDetailsTemplateScript);
 
-            // // Pass our data to the template
+            // // Pass our data to the template (corresponding to clicked card)
             var projectCardDetailsCompiledHtml = projectCardDetailsTemplate(clickedCardData);
 
-            // Add the compiled html to the page
-            $('.project-details').html(projectCardDetailsCompiledHtml);
+            // Add the compiled html to the modal body
+            $('.modal-body').html(projectCardDetailsCompiledHtml);
         });
     });
 }(jQuery));
