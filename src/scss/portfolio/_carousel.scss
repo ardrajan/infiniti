@@ -1,0 +1,23 @@
+// -----------------------------
+// Overrides for carousel
+// -----------------------------
+
+// Styles for the carousel
+.carousel {
+    background-color: $carousel-bg;
+}
+
+// Removing gradients for the left and right nav
+.carousel-control {
+    &.left,
+    &.right {
+        background-image: none;
+    }
+}
+
+// Styles for the carousel caption
+.carousel-caption {
+    h3 {
+        color: $carousel-caption-color;
+    }
+}

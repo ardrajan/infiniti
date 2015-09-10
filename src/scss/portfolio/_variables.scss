@@ -78,3 +78,17 @@ $modal-lg:                      940px;
 // Changing modal backdrop z-index so that the modal appears properly
 $zindex-modal-background:       0;
 
+// Bootstrap carousel overrides
+$carousel-bg:                        $dark-grey;
+$carousel-text-shadow:                        none;
+
+$carousel-control-color:                      $white;
+$carousel-control-width:                      15% !default;
+$carousel-control-opacity:                    .5 !default;
+$carousel-control-font-size:                  20px !default;
+
+$carousel-indicator-active-bg:                $white;
+$carousel-indicator-border-color:             $white;
+
+$carousel-caption-color:                      $white;;
+

@@ -55,7 +55,9 @@
 
 @import 'bootstrap/tooltip';
 @import 'bootstrap/popovers';
+
 @import 'bootstrap/carousel';
+@import 'portfolio/carousel'; // overrides
 
 // Utility classes
 @import 'bootstrap/utilities';
