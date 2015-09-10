@@ -26,7 +26,40 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+        <nav id="cd-vertical-nav">
+            <ul>
+                <li>
+                    <a href="#about" data-number="1">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Intro</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#one-journey" data-number="2">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Case Study</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#recent-projects" data-number="3">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Recent Work</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tools" data-number="4">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Tools</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" data-number="5">
+                        <span class="cd-dot"></span>
+                        <span class="cd-label">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <!-- Modal - Recent Projects -->
         <section id="modal-recent-projects">
             <!-- Modal -->
@@ -46,7 +79,7 @@
         
         
         <!-- About Section -->
-        <section id="about" data-stellar-background-ratio="0">
+        <section id="about" class="cd-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -62,7 +95,7 @@
         </section> <!-- About Section -->
 
         <!-- Journey Section -->
-        <section id="journey" data-stellar-background-ratio="0">
+        <section id="journey">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -80,7 +113,7 @@
         </section> <!-- Journey Section -->
 
         <!-- One Journey -->
-        <section id="one-journey" data-stellar-background-ratio="0">
+        <section id="one-journey" class="cd-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -96,7 +129,7 @@
         </section> <!-- One Journey -->
 
         <!-- Recent Projects -->
-        <section id="recent-projects" class="cardboard">
+        <section id="recent-projects" class="cardboard cd-section">
             <div class="container">
                 <div class="row">
                     <h1 class="text-uppercase text-center">Lorem ipsum</h1>
@@ -108,7 +141,7 @@
         </section> <!-- Recent Projects -->
 
         <!-- Tools -->
-        <section id="tools" data-stellar-background-ratio="0">
+        <section id="tools" class="cd-section">
              <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -186,7 +219,7 @@
         </section> <!-- Tools -->
 
         <!-- Contact -->
-        <footer id="contact" class="cardboard">
+        <footer id="contact" class="cardboard cd-section">
             <div class="container">
                 <div class="row">
                     <h1 class="text-uppercase text-center">Get in touch</h1>
@@ -273,6 +306,7 @@
         <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
         <script src="public/js/vendor/stellar/jquery.stellar.min.js"></script>
         <script src="public/js/vendor/handlebars/handlebars-v4.0.2.js"></script>
+        <script src="public/js/vendor/vertical-navigation/main.js"></script>
         <script src="public/js/portfolio/portfolio-main.js"></script>
         
     </body>
