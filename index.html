@@ -223,25 +223,25 @@
         </script>
         <script id="project-card-details-template" type="text/x-handlebars-template">
             <!-- Carousel -->
-            <div id="carousel-portfolio" class="carousel slide" data-ride="">
+            <div id="carousel-portfolio" class="carousel slide" data-interval="false">
                 <!-- Indicators -->
-                
+                <ol class="carousel-indicators">
+                    {{#each largeImage}}
+                        <li data-target="#carousel-portfolio" data-slide-to="{{@index}}" {{#if @first}}class="active"{{/if}}></li>
+                    {{/each}}
+                </ol> <!-- Indicators -->
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     {{#each largeImage}}
-                        {{#if @first}}
-                            <div class="item active">
-                        {{else}}
-                            <div class="item">
-                        {{/if}}
+                        <div class="item {{#if @first}}active{{/if}}">
                             <img src={{image}} alt={{alt}} class="img-responsive center-block">
                             <div class="carousel-caption">
                                 <h3>{{caption}}</h3>
                             </div>
                         </div>
                     {{/each}}
-                </div>
+                </div> <!-- Wrapper for slides -->
 
                 <!-- Controls -->
                 <a class="left carousel-control" href="#carousel-portfolio" role="button" data-slide="prev">
