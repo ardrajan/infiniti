@@ -2,9 +2,9 @@
 // Overrides for variables
 // -----------------------------
 
-// Container that the modal scrolls within
-.modal {
-    // display: block;
+// Adjust margins for the modal
+.modal-dialog {
+    margin: 10px auto;
 }
 
 // Actual modal
@@ -15,8 +15,21 @@
 // Modal header
 // Close icon
 .modal-header .close {
-  font-size: 60px;
-  left: 90%;
-  position: absolute;
-  opacity: 1;
+    font-size: 60px;
+    left: 90%;
+    margin-top: -10px;
+    position: absolute;
+    opacity: 1;
+    
+    // Remove focus
+    &:focus {
+        outline: none;
+    }
+}
+
+// Adjust close button position for small devices
+@media (max-width: $screen-xs-max) {
+    .modal-header .close {
+        left: 85%;
+    }
 }
