@@ -1,3 +1,7 @@
+// -----------------------------
+// Theme related styles
+// -----------------------------
+
 .wrapper {
     background-color: rgba($white, 0.95);
     padding: 160px 80px 240px 80px;
@@ -25,8 +29,9 @@
 }
 
 #one-journey {
-    background: url(../img/006.jpg) no-repeat center center fixed;
-    background-size: cover;
+    // background: url(../img/006.jpg) no-repeat center center fixed;
+    // background-size: cover;
+    background-color: $light-blue;
 
     img {
         max-width: 100%;
@@ -43,6 +48,10 @@
 
     h1.text-uppercase {
         margin: 70px 0 60px 0;
+    }
+
+    .container {
+        padding-bottom: 30px;
     }
 }
 
