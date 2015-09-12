@@ -17,7 +17,35 @@
 
 // Styles for the carousel caption
 .carousel-caption {
+    background-color: $black;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    right: 0;
+
     h3 {
         color: $carousel-caption-color;
+        margin-top: 0;
+        padding: 0 20%;
+    }
+}
+
+// Overrides for carousel indicator position
+.carousel-indicators {
+    bottom: 0;
+}
+
+// Scale up controls for tablets and up
+@media screen and (min-width: $screen-sm-min) {
+    // Overrides for carousel caption
+    .carousel-caption {
+        left: 0;
+        padding-bottom: 20px;
+        right: 0;
+    }
+    
+    // Overrides for carousel indicator position
+    .carousel-indicators {
+        bottom: 0;
     }
 }

@@ -31,7 +31,7 @@
 #one-journey {
     // background: url(../img/006.jpg) no-repeat center center fixed;
     // background-size: cover;
-    background-color: $light-blue;
+    background-color: $light-yellow;
 
     img {
         max-width: 100%;
@@ -51,22 +51,20 @@
     }
 
     .container {
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
 }
 
 .project-card {
     background: $white;
-    margin: 0 auto 30px auto; 
-    position: relative;
+    height: 315px;
+    margin: 0 auto 30px auto;
     max-width: 250px;
+    position: relative;
     @include box-shadow(rgba($black, 0.5) 0px 3px 4px 1px);
 
     .h4 {
-        color: $white;
         display: block;
-        padding: 0 15px;
-        position: absolute;
         top: 165px;
     }
 
@@ -81,15 +79,17 @@
         cursor: pointer;
         
         // Change color of the blurb
-        .project-blurb {
+        .project-blurb,
+        .h4 {
             color: $white;
         }
     }
 }
 
 #tools {
-    background: url(../img/009.jpg) no-repeat center center fixed;;
-    background-size: cover;
+    // background: url(../img/009.jpg) no-repeat center center fixed;;
+    // background-size: cover;
+    background-color: $light-grey;
 
     .wrapper {
         padding: 80px 20px 240px 20px;
@@ -113,13 +113,28 @@
             margin-bottom: 25px;
             padding: 0 40px 0 0;
         }
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 }
 
 // Styles for contact section
 #contact {
-    background-color: $light-grey;
+    background-color: $brown-green;
+    color: $pastel-brown;
     padding-bottom: 50px;
+
+    h1, .h1,
+    h2, .h2 {
+        color: $pastel-brown;
+    }
+
+    h1:after,
+    .h1:after {
+        background-color: $pastel-brown;
+    }
     
     // Styles for the social media icons from font awesome
     .social-media {
@@ -158,16 +173,16 @@
     }
 
     .project-card {
-        max-width: 550px;
+        // max-width: 550px;
         
-        .h4 {
-            top: 80%;
-        }
+        // .h4 {
+        //     top: 80%;
+        // }
 
-        .project-blurb {
-            left: 250px;
-            position: absolute;
-            top: 0;
-        }
+        // .project-blurb {
+        //     left: 250px;
+        //     position: absolute;
+        //     top: 0;
+        // }
     }
 }

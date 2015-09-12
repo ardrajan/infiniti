@@ -88,29 +88,16 @@
                             <h2 class="text-uppercase text-center">I care about <span class="emphasis">human</span> experiences...</h2>
                             <h3 class=" text-center">...and I work at the point where people, design, art and technology converge to create compelling stories and delightful experiences.</h3>
                         </header>
+                        <!-- Journey Details -->
+                        <section id="journey-details" class="wrapper">
+                            <h3 class="text-center">I love looking at the <span class="emphasis">big picture</span> and leading stakeholders on a <span class="emphasis">journey</span> to a place where solutions, based on the needs of the most important members of the journey – <br/><span class="emphasis">the users</span>, come into sharp focus.</h3>
+                            <br/>
+                            <h3 class="text-center">This journey consists of user research, wireframing, documentation, prototyping, iterating, user testing and validation. Lately, I also code the front-end solution.</h3>
+                        </section> <!-- Journey Details -->
                     </div>
                 </div>
             </div>
         </section> <!-- About Section -->
-
-        <!-- Journey Section -->
-        <section id="journey">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="wrapper">
-                            <!-- Journey Details -->
-                            <section id="journey-details">
-                                <h2 class="text-center text-uppercase">I am a User Experience Designer</h2>
-                                <h3 class="text-center">I love looking at the <span class="emphasis">big picture</span> and leading stakeholders on a <span class="emphasis">journey</span> to a place where solutions, based on the needs of the most important members of the journey – <br/><span class="emphasis">the users</span>, come into sharp focus.</h3>
-                                <br/>
-                                <h3 class="text-center">This journey consists of user research, wireframing, documentation, prototyping, iterating, user testing and validation. Lately, I also code the front-end solution.</h3>
-                            </section> <!-- Journey Details -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!-- Journey Section -->
 
         <!-- One Journey -->
         <section id="one-journey" class="cd-section cardboard">
@@ -141,11 +128,11 @@
         </section> <!-- Recent Projects -->
 
         <!-- Tools -->
-        <section id="tools" class="cd-section">
+        <section id="tools" class="cd-section cardboard">
              <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <div class="wrapper">
+                        <!-- <div class="wrapper"> -->
                             <h1 class="text-uppercase text-center">Lorem ipsum</h1>
                             <div class="skills-section">
                                 <div class="col-sm-6 col-md-6">
@@ -212,7 +199,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -242,11 +229,11 @@
                 <div class="col-sm-6 col-md-4">
                     <div class="project-card" data-toggle="modal" data-target="#projectCardModal">
                         <div class="project-image">
-                            <img src={{thumbnail.image}} alt={{thumbnail.alt}}>
-                            <span class="h4 text-uppercase">{{title}}</span>
+                            <img src={{thumbnail.image}} alt={{thumbnail.alt}} class="img-reponsive">
                         </div>
                         <div class="project-blurb">
-                            <p>{{blurb}}</p>
+                            <span class="h4 text-uppercase">{{title}}</span>
+                            <p>{{role}}</p>
                         </div>
                     </div>
                 </div>
@@ -298,7 +285,7 @@
                     {{/each}}
                 </ul>
                 {{#if website}}
-                    <p class="h2"><span class="text-uppercase">External site:</span><a class="text-lowercase" href={{website.url}}>   {{website.sitename}}</a></p>
+                    <p class="h2"><span class="text-uppercase">External site:</span><a class="text-lowercase" href={{website.url}} target="_blank">   {{website.sitename}}</a></p>
                 {{/if}}
             </div> <!-- Project details -->
         </script>
