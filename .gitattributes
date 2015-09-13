@@ -1,0 +1,3 @@
+public/img/*.png filter=git-crypt diff=git-crypt
+public/img/small/*.png filter=git-crypt diff=git-crypt
+public/img/large/*.png filter=git-crypt diff=git-crypt
