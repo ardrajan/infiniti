@@ -232,8 +232,8 @@
                             <img src={{thumbnail.image}} alt={{thumbnail.alt}} class="img-reponsive">
                         </div>
                         <div class="project-blurb">
-                            <span class="h4 text-uppercase">{{title}}</span>
-                            <p>{{role}}</p>
+                            <span class="h4">{{title}}</span>
+                            <p class="role">{{role}}</p>
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,13 @@
                 <div class="carousel-inner">
                     {{#each largeImage}}
                         <div class="item {{#if @first}}active{{/if}}">
-                            <img src={{image}} alt={{alt}} class="img-responsive center-block">
+                            {{#if image}}
+                                <img src={{image}} alt={{alt}} class="img-responsive center-block">
+                                {{else}}
+                                    {{#if video}}
+                                        <iframe src={{video}} width="640" height="480" frameborder="0" class="center-block"></iframe>
+                                    {{/if}}
+                            {{/if}}
                             <div class="carousel-caption">
                                 <h3 class="text-capitalize">{{caption}}</h3>
                             </div>

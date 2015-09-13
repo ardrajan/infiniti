@@ -57,7 +57,7 @@
 
 .project-card {
     background: $white;
-    height: 315px;
+    height: 300px;
     margin: 0 auto 30px auto;
     max-width: 250px;
     position: relative;
@@ -67,10 +67,18 @@
         display: block;
         top: 165px;
     }
-
+    
+    // Project title and role
     .project-blurb {
         font-weight: 400;
-        padding: 15px;
+        padding: 5px 12px;
+        
+        // Adjust position of role on the card
+        .role {
+            font-size: 11px;
+            position: absolute;
+            top: 88%;
+        }
     }
 
     // Hover state for the card
@@ -150,7 +158,7 @@
 
     h2,
     .h2 {
-        line-height: 35px;
+        line-height: 40px;
         padding-top: 40px;
     }
 
