@@ -17,13 +17,13 @@ $white:         #fdfdfd;
 $border-radius-none:    0;
 
 // Bootstrap global textual link overrides
-$link-color:                    $dark-green;
+$link-color:                    $pastel-brown;
 $link-hover-color:              darken($link-color, 15%);
 
 // Bootstrap button overrides
-$btn-primary-color:             $dark-green;
+$btn-primary-color:             $white;
 $btn-primary-bg:                transparent;
-$btn-primary-border:            $dark-green;
+$btn-primary-border:            $white;
 
 // Bootstrap overrides for `<body>`
 $body-bg:               $white;

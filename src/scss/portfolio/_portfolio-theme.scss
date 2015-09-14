@@ -14,7 +14,7 @@
 }
 
 #about {
-    background: url(../img/001.png) no-repeat center center fixed;
+    background: url(../img/004.jpg) no-repeat center center fixed;
     background-size: cover;
 
     .wrapper {
@@ -31,11 +31,20 @@
 #one-journey {
     // background: url(../img/006.jpg) no-repeat center center fixed;
     // background-size: cover;
-    background-color: $light-yellow;
+    background-color: $dark-grey;
 
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    h1, .h1,
+    h3, .h3 {
+        color: $pastel-brown;
+
+        &:after {
+            background-color: $pastel-brown;
+        }
     }
 }
 
@@ -130,7 +139,7 @@
 
 // Styles for contact section
 #contact {
-    background-color: $brown-green;
+    background-color: $dark-grey;
     color: $pastel-brown;
     padding-bottom: 50px;
 
@@ -146,7 +155,7 @@
     
     // Styles for the social media icons from font awesome
     .social-media {
-        color: $dark-green;
+        color: $white;
         display: block;
         margin: 50px 0;
     }
