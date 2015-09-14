@@ -14,7 +14,7 @@
 }
 
 #about {
-    background: url(../img/004.jpg) no-repeat center center fixed;
+    background: url(../img/001.jpg) no-repeat center center fixed;
     background-size: cover;
 
     .wrapper {
@@ -46,6 +46,10 @@
             background-color: $pastel-brown;
         }
     }
+}
+
+#case-study {
+    display: none;
 }
 
 #recent-projects {
@@ -167,13 +171,14 @@
 
     h2,
     .h2 {
-        line-height: 40px;
+        // line-height: 40px;
         padding-top: 40px;
     }
+}
 
-    .work-description {
-        padding: 0 0 0 19px;
-    }
+// Styles for bullet lists
+.bullet-list {
+    padding: 0 0 0 19px;
 }
 
 // Media queries
