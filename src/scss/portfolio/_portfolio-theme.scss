@@ -50,6 +50,15 @@
 
 #case-study {
     display: none;
+
+    .col-xs-10 {
+        margin-bottom: 30px;
+    }
+
+    // Class to add custom padding for layout purposes
+    .adjust-padding {
+        padding-top: 20px;
+    }
 }
 
 #recent-projects {

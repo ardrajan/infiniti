@@ -41,3 +41,31 @@ h4, .h4 {
 .emphasis {
     font-weight: $font-weight-h1;
 }
+
+// Overrides for blockquotes
+blockquote {
+    border-left: none;
+    font-size: 24px;
+    color: $dark-grey;
+    font-family: 'Merriweather', sans-serif;
+    padding: 10px 60px 0 60px;
+    text-align: center;
+
+    &:before {
+        background: $dark-grey;
+        content: '';
+        display: block;
+        height: 2px;
+        margin: 20px auto 40px;
+        width: 200px;
+    }
+
+    &:after {
+        background: $dark-grey;
+        content: '';
+        display: block;
+        height: 2px;
+        margin: 40px auto 40px;
+        width: 200px;
+    }
+}
