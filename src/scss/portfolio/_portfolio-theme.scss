@@ -202,18 +202,13 @@
             padding: 80px 20px 30px 20px;
         }
     }
+}
 
-    .project-card {
-        // max-width: 550px;
-        
-        // .h4 {
-        //     top: 80%;
-        // }
-
-        // .project-blurb {
-        //     left: 250px;
-        //     position: absolute;
-        //     top: 0;
-        // }
+// .img-responsive does not work properly on Firefox.
+// Overrides to ensure Firefox displays images properly
+@-moz-document url-prefix() { 
+    .img-responsive {
+        display: inline;
+        width: 100%;
     }
 }
