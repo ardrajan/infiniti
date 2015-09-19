@@ -20,6 +20,24 @@
     var modalBody = $('.modal-body');
     var caseStudySection = $('#case-study');
     var modalCloseButton = $('.close');
+    var breathePreloader = $('#breathe-preloader');
+
+    // Show preloader image while images are being downloaded
+    $('body').imagesLoaded()
+    .always( function( instance ) {
+        console.log('All images loaded');
+    })
+    .done( function( instance ) {
+        breathePreloader.hide();
+        // $('#portfolio-wrapper').show();
+    })
+    .fail( function() {
+        console.log('All images loaded, at least one is broken');
+    })
+    .progress( function( instance, image ) {
+        var result = image.isLoaded ? 'loaded' : 'broken';
+        console.log( 'Image is ' + result + ' for ' + image.img.src );
+    });
 
     // Get the JSON data
     var jsonURL = 'public/data/projects.json';

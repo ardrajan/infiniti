@@ -49,6 +49,21 @@ module.exports = function(grunt) {
             allFiles: ['src/scss/*.scss', 'src/scss/portfolio/*.scss']
         },
 
+        validation: {
+            options: {
+            reset: grunt.option('reset') || false,
+            stoponerror: false,
+            // remotePath: 'http://decodize.com/',
+            // remoteFiles: ['html/moving-from-wordpress-to-octopress/',
+            //               'css/site-preloading-methods/'], //or
+            // remoteFiles: 'validation-files.json', // JSON file contains array of page paths.
+            relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
+            },
+            files: {
+                src: ['index.html']
+                }
+        },
+
         watch: {
             scripts: {
                 files: ['public/js/portfolio/*.js'],
@@ -82,6 +97,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-html-validation');
 
-    grunt.registerTask('default', ['imagemin', 'watch']);
+    grunt.registerTask('default', ['imagemin', 'watch', 'validation']);
 };
