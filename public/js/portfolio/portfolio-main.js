@@ -20,7 +20,7 @@
     var modalBody = $('.modal-body');
     var caseStudySection = $('#case-study');
     var modalCloseButton = $('.close');
-    var breathePreloader = $('#breathe-preloader');
+    var breathePreloader = $('#preloader-container');
 
     // Show preloader image while images are being downloaded
     $('body').imagesLoaded()
@@ -29,7 +29,7 @@
     })
     .done( function( instance ) {
         breathePreloader.hide();
-        // $('#portfolio-wrapper').show();
+        $('#portfolio-wrapper').show();
     })
     .fail( function() {
         console.log('All images loaded, at least one is broken');

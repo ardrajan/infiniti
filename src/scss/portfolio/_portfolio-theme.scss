@@ -6,6 +6,12 @@
     display: none;
 }
 
+#preloader-container {
+    background-color: rgba($white, 0.9);
+    height: 100vh;
+    width: 100%;    
+}
+
 #breathe-preloader{
     animation: breathe_animation 5s infinite linear;
     background:#000;
