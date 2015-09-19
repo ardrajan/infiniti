@@ -6,34 +6,85 @@
     var caseStudySection = $('#case-study');
     var modalCloseButton = $('.close');
     var breathePreloader = $('#preloader-container');
+    var projectData;
+    var manifest;
+    var preload;
 
-    // Show preloader image while images are being downloaded
-    $('body').imagesLoaded()
-    .always( function( instance ) {
-        console.log('All images loaded');
-    })
-    .done( function( instance ) {
+    // Function to setup the assets manifest
+    function setupManifest() {
+        manifest = [{
+            src: 'public/data/projects.json',
+            id: "jsonFile"
+        },
+        {
+            src: 'public/img/case/000.gif',
+            id: "protoGifFile"
+        }
+        ];
+
+        var index;
+
+        // Load main images
+        for(index=1; index<=3; index++) {
+            manifest.push({src:"public/img/00"+index+".png"});
+        }
+
+        // Load images for case study
+        for(index=1; index<=6; index++) {
+            manifest.push({src:"public/img/case/00"+index+".png"});
+        }
+
+        // Load large images for individual projects
+        for(index=1; index<=11; index++) {
+            manifest.push({src:"public/img/large/lg_00"+index+".png"});
+        }
+
+        // Load small images for individual projects
+        for(index=1; index<=4; index++) {
+            manifest.push({src:"public/img/small/sm_00"+index+".png"});
+        }
+
+        // Load case study gif
+        manifest.push({src:"public/img/case/000.gif"});
+    }
+
+    function startPreload() {
+        preload = new createjs.LoadQueue(true);
+        // preload.installPlugin(createjs.Sound);          
+        preload.on("fileload", handleFileLoad);
+        preload.on("progress", handleFileProgress);
+        preload.on("complete", loadComplete);
+        preload.on("error", loadError);
+        preload.loadManifest(manifest);
+    }
+
+    function handleFileLoad(event) {
+        console.log("A file has loaded of type: " + event.item.type);
+        if(event.item.id === 'jsonFile') {
+            projectData = jQuery.parseJSON(event.rawResult);
+            console.log(projectData);
+        }
+    }
+
+    function loadError(evt) {
+        console.log("Error!",evt.text);
+    }
+
+
+    function handleFileProgress(event) {
+    
+    }
+
+    function loadComplete(event) {
+        console.log("Finished Loading Assets");
         breathePreloader.hide();
         $('#portfolio-wrapper').show();
-    })
-    .fail( function() {
-        console.log('All images loaded, at least one is broken');
-    })
-    .progress( function( instance, image ) {
-        var result = image.isLoaded ? 'loaded' : 'broken';
-        console.log( 'Image is ' + result + ' for ' + image.img.src );
-    });
+        setupRecentProjects();
+    }
+    setupManifest();
+    startPreload();
 
-    // Get the JSON data
-    var jsonURL = 'public/data/projects.json';
-
-    $.getJSON(jsonURL, function(){})
-    // JSON fetch is unsuccessful
-    .fail(function() {
-        console.log('JSON fetch failed');
-    })
-    // JSON fetch is successful
-    .done(function(projectData) {
+    function setupRecentProjects () {
         console.log('JSON fetch successful');
 
         // Grab the template script
@@ -69,16 +120,17 @@
             // Add the compiled html to the modal body
             modalBody.html(projectCardDetailsCompiledHtml);
         });
-    });
-
-    // Click event for attaching the case study details when the case study button is clicked
-    $('#case-study-button').on('click', function() {
-        modalTitle.text('mCLASS:CIRCLE');
-        caseStudySection.show();
-        modalBody.html(caseStudySection);
-        modalCloseButton.on('click', function() {
-            caseStudySection.hide();
-            $(this).off('click');
+    
+        // Click event for attaching the case study details when the case study button is clicked
+        $('#case-study-button').on('click', function() {
+            modalTitle.text('mCLASS:CIRCLE');
+            caseStudySection.show();
+            modalBody.html(caseStudySection);
+            modalCloseButton.on('click', function() {
+                caseStudySection.hide();
+                $(this).off('click');
+            });
         });
-    });
+
+    }
 }(jQuery));
