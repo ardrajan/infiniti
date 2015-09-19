@@ -48,7 +48,7 @@ blockquote {
     font-size: 24px;
     color: $dark-grey;
     font-family: 'Merriweather', sans-serif;
-    padding: 10px 60px 0 60px;
+    padding: 10px 120px 0 120px;
     text-align: center;
 
     &:before {
@@ -67,5 +67,12 @@ blockquote {
         height: 2px;
         margin: 40px auto 40px;
         width: 200px;
+    }
+}
+
+// Adjust close button position for small devices
+@media (max-width: $screen-xs-max) {
+    blockquote {
+        padding: 10px 20px 0 20px;
     }
 }
