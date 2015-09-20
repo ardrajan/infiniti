@@ -49,8 +49,7 @@
     }
 
     function startPreload() {
-        preload = new createjs.LoadQueue(true);
-        // preload.installPlugin(createjs.Sound);          
+        preload = new createjs.LoadQueue(true);      
         preload.on("fileload", handleFileLoad);
         preload.on("progress", handleFileProgress);
         preload.on("complete", loadComplete);
@@ -77,9 +76,10 @@
 
     function loadComplete(event) {
         console.log("Finished Loading Assets");
-        breathePreloader.hide();
-        $('#portfolio-wrapper').show();
-        setupRecentProjects();
+        breathePreloader.fadeOut(1000, function() {
+            $('#portfolio-wrapper').fadeIn(500);
+            setupRecentProjects();
+        });
     }
     setupManifest();
     startPreload();
