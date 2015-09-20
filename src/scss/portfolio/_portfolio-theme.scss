@@ -89,6 +89,10 @@
 }
 
 #recent-projects {
+    background-color: $light-grey;
+}
+
+#about-website {
     background-color: $white;
 }
 
@@ -198,6 +202,11 @@
         color: $white;
         display: block;
         margin: 50px 0;
+
+        &:hover {
+            color: $link-hover-color;
+            @include transition(all 0.15s ease-out);
+        }
     }
 }
 

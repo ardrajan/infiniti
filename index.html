@@ -57,13 +57,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#tools" data-number="4">
+                        <a href="#about-website" data-number="4">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">Website Development</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tools" data-number="5">
                             <span class="cd-dot"></span>
                             <span class="cd-label">Tools</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" data-number="5">
+                        <a href="#contact" data-number="6">
                             <span class="cd-dot"></span>
                             <span class="cd-label">Contact</span>
                         </a>
@@ -321,7 +327,9 @@
             <section id="about-website" class="cardboard cd-section">
                 <div class="container">
                     <div class="row">
-                        <h1 class="text-uppercase text-center">About This Website</h1>
+                        <h1 class="text-uppercase text-center">Website Development</h1>
+                        <p class="h3 text-center">This website has been developed using HTML5, CSS3, Sass, Bootstrap 3, jQuery, PreloadJS and <a href="http://codyhouse.co/gem/vertical-fixed-navigation/" target="_blank">Vertical Fixed Navigation</a> by CodyHouse. I have used Git for version control and Grunt for Javascript automation. Photos licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a> have been used on this site.</p>
+                        <button type="button" class="btn btn-lg btn-secondary center-block">View Source on Github</button>
                     </div>
                 </div>
             </section> <!-- Recent Projects -->
@@ -427,8 +435,8 @@
                         <h1 class="text-uppercase text-center">Get in touch</h1>
                         <div class="col-sm-12">
                             <div class="contact-details">
-                                <h2 class="text-center">ard.rajan@gmail.com</h2>
-                                <a href="" class="social-media text-center">
+                                <h2 class="text-center">sayhellotorajan@gmail.com</h2>
+                                <a href="https://www.linkedin.com/in/ardrajan" class="social-media text-center" target="_blank">
                                     <i class="fa fa-linkedin-square fa-3x"></i>
                                 </a>
                                 <button type="button" class="btn btn-lg btn-primary center-block">Download resume</button>
@@ -508,7 +516,7 @@
                     {{/each}}
                 </ul>
                 {{#if website}}
-                    <p class="h2"><span class="text-uppercase">External site:</span><a class="text-lowercase" href={{website.url}} target="_blank">   {{website.sitename}}</a></p>
+                    <p class="h2"><span class="text-uppercase">External site:</span><a href={{website.url}} target="_blank">   {{website.sitename}}</a></p>
                 {{/if}}
             </div> <!-- Project details -->
         </script>

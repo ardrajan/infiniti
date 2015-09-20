@@ -13,11 +13,36 @@
     }
 }
 
+// btn-primary hover and active styles
 .btn-primary {
     &:hover,
     &:active {
-        color: darken($btn-primary-color, 20%);;
-        background-color: darken($btn-primary-bg, 10%);
+        color: darken($btn-primary-color, 20%);
         border-color: darken($btn-primary-border, 12%);
     }
+}
+
+// Secondary button for the theme
+.btn-secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+    &:hover,
+    &:active {
+        color: darken($btn-secondary-color, 100%);
+        border-color: darken($btn-secondary-border, 100%);
+    }
+}
+
+// btn-primary, btn-secondary focus styles
+// .btn-primary,
+// .btn-secondary {
+//     &:focus {
+//         outline: none;
+//     }
+// }
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
+    @include box-shadow(none);
 }
