@@ -27,6 +27,12 @@
     }
 }
 
+// Override slide animation to remove it
+.modal.fade, 
+.modal.fade .modal-dialog {
+    @include translate(0, 0);
+}
+
 // Adjust close button position for small devices
 @media (max-width: $screen-xs-max) {
     .modal-header .close {
