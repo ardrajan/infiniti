@@ -121,8 +121,12 @@
             modalBody.html(projectCardDetailsCompiledHtml);
         });
     
-        // Click event for attaching the case study details when the case study button is clicked
-        $('#case-study-button').on('click', function() {
+        // Click event for attaching the case study details when the case study button or image is clicked
+        $('#case-study-button').on('click', caseStudyModal);
+        $('#case-study-image').on('click', caseStudyModal);
+
+        // Function to show the modal with case study details
+        function caseStudyModal () {
             modalTitle.text('mCLASS:CIRCLE');
             caseStudySection.show();
             modalBody.html(caseStudySection);
@@ -130,7 +134,6 @@
                 caseStudySection.hide();
                 $(this).off('click');
             });
-        });
-
+        }
     }
 }(jQuery));
