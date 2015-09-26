@@ -210,6 +210,8 @@
     }
 }
 
+
+
 // Class for detailed description in the overlay card
 .project-details {
     padding: 0 50px 40px 50px;
@@ -246,5 +248,13 @@
     .img-responsive {
         display: inline;
         width: 100%;
+    }
+}
+
+// Handling styles for touch devices 
+.touch {
+    // Show cardboard style for about section
+    #about {
+        background: url(../img/003.png) repeat;
     }
 }

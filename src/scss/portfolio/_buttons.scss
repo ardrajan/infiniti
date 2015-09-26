@@ -40,11 +40,10 @@
 }
 
 a.btn {
-    max-width: 200px;
+    max-width: 250px;
 
     &:hover,
     &:focus {
         color: $link-hover-color;
-        // text-decoration: $link-hover-decoration;
     }
 }
