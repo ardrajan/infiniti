@@ -99,6 +99,11 @@
         // Add the compiled html to the page
         projectsGrid.html(projectCardCompiledHtml);
 
+        // Hover state to show the project info
+        $('.project-card').hover(function () {
+            $(this).find('.project-info').toggleClass('show');
+        });
+
         // Click event for getting JSON data corresponding clicked element
         projectsGrid.on('click', '.project-card', function(e) {
             // Get the index of the parent of the clicked element

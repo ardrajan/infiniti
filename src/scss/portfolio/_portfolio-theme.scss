@@ -138,6 +138,21 @@
         }
     }
 
+    .project-info {
+        background-color: rgba(0,0,0,0.7);
+        color: $white;
+        opacity: 0;
+        height: 200px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        @include transition(opacity 0.3s);
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
     // Hover state for the card
     &:hover {
         background: $dark-grey;
