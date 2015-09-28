@@ -139,11 +139,12 @@
     }
 
     .project-info {
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.8);
         color: $white;
-        opacity: 0;
         height: 200px;
-        padding: 20px;
+        line-height: 20px;
+        opacity: 0;
+        padding: 20px 10px;
         position: absolute;
         top: 0;
         @include transition(opacity 0.3s);

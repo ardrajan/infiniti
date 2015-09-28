@@ -133,10 +133,10 @@
         // Function to show the modal with case study details
         function caseStudyModal () {
             modalTitle.text('mCLASS:CIRCLE');
-            caseStudySection.show();
+            caseStudySection.show(300);
             modalBody.html(caseStudySection);
             modalCloseButton.on('click', function() {
-                caseStudySection.hide();
+                caseStudySection.hide(300);
                 $(this).off('click');
             });
         }
