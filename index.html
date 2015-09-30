@@ -524,7 +524,9 @@
                     {{/each}}
                 </ul>
                 {{#if website}}
-                    <p class="h2"><span class="text-uppercase">External site:</span><a href={{website.url}} target="_blank">   {{website.sitename}}</a></p>
+                    {{#each website}}
+                        <p class="h2"><span class="text-uppercase">External site:</span><a href={{url}} target="_blank">   {{sitename}}</a></p>
+                    {{/each}}
                 {{/if}}
             </div> <!-- Project details -->
         </script>
