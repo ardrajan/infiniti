@@ -21,7 +21,9 @@
 @import 'bootstrap/code';
 @import 'bootstrap/grid';
 @import 'bootstrap/tables';
+
 @import 'bootstrap/forms';
+@import 'portfolio/forms'; // overrides
 
 @import 'bootstrap/buttons';
 @import 'portfolio/buttons'; // overrides

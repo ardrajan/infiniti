@@ -2,8 +2,18 @@
 // Theme related styles
 // -----------------------------
 
-#modal-login {
-    background: url(../img/002.png) repeat;
+.wrapper {
+    background-color: rgba($white, 0.95);
+    padding: 160px 80px 240px 80px;
+}
+
+#user-login {
+    background: url(../img/003.png) repeat;
+    height: 100%;
+
+    .wrapper {
+        background: transparent;
+    }
 }
 
 #portfolio-wrapper {
@@ -33,11 +43,6 @@
     0% {transform: rotate(0deg); transform: scale(0.7);}
     50% {transform: rotate(180deg); transform: scale(1); background:#3f3f3f;}
     100% {transform: rotate(360deg); transform: scale(0.7);}
-}
-
-.wrapper {
-    background-color: rgba($white, 0.95);
-    padding: 160px 80px 240px 80px;
 }
 
 .logo {
