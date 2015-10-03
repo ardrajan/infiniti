@@ -1,5 +1,5 @@
 // -----------------------------
-// Overrides for variables
+// Overrides for modals
 // -----------------------------
 
 // Adjust margins for the modal
@@ -7,13 +7,12 @@
     margin: 10px auto;
 }
 
-// Actual modal
+// Customize modal borders
 .modal-content {
     border-radius: $border-radius-none;
 }
 
-// Modal header
-// Close icon
+// Customize modal close icon
 .modal-header .close {
     font-size: 60px;
     left: 90%;

@@ -2,6 +2,7 @@
 // Overrides for buttons
 // -----------------------------
 
+// Overriding base styles
 .btn {
     font-size: $btn-font-size;
     margin: 40px 0;
@@ -13,7 +14,7 @@
     }
 }
 
-// btn-primary hover and active styles
+// Overriding the primary button styles
 .btn-primary {
     &:hover,
     &:active {
@@ -33,12 +34,14 @@
     }
 }
 
+// Overrides to active and focus states
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
     outline: none;
     @include box-shadow(none);
 }
 
+// Customizing styles for 'links as buttons'
 a.btn {
     max-width: 250px;
 

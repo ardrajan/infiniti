@@ -2,12 +2,7 @@
 // Overrides for typography
 // -----------------------------
 
-// h1, .h1,
-// h2, .h2,
-// .emphasis {
-//     text-align: center;
-// }
-
+// Customize h1 elements
 h1, .h1 {
     font-weight: $font-weight-h1;
     
@@ -21,17 +16,20 @@ h1, .h1 {
     }
 }
 
+// Customize h2 elements
 h2, .h2 {
     line-height: 40px;
     font-weight: $font-weight-h2;
 }
 
+// Customize h3 elements
 h3, .h3 {
     font-family: $h3-font-family;
     font-weight: $font-weight-h3;
     line-height: 34px;
 }
 
+// Customize h4 elements
 h4, .h4 {
     font-family: $h4-font-family;
     font-weight: $font-weight-h4;
@@ -42,7 +40,7 @@ h4, .h4 {
     font-weight: $font-weight-h1;
 }
 
-// Overrides for blockquotes
+// Customize blockquotes
 blockquote {
     border-left: none;
     font-size: 24px;
@@ -70,7 +68,7 @@ blockquote {
     }
 }
 
-// Adjust close button position for small devices
+// Customize blockquote for small devices
 @media (max-width: $screen-xs-max) {
     blockquote {
         padding: 10px 20px 0 20px;
