@@ -4,18 +4,17 @@
 
 // Portfolio colors
 $black:         #000;
-// $brown-green:   #54564f;
-// $dark-green:    #74975b;
 $dark-grey:     #3f3f3f;
-// $light-blue:    #c7e7ef;
 $light-grey:    #dee0e3;
-$light_yellow:  #e4be6c;
 $pastel-brown:  #c1c1c1;
 $white:         #fdfdfd;
 
+// Bootstrap overrides for `<body>`
+$body-bg:               $white;
+$text-color:            $dark-grey;
+
 // Misc
-$border-radius-none:    0;
-$form-group-min-width:  200px;
+$form-group-min-width:  200px; // Set min width for form-group
 
 // Bootstrap global textual link overrides
 $link-color:                    $pastel-brown;
@@ -30,18 +29,10 @@ $btn-secondary-color:           $dark-grey;
 $btn-secondary-bg:              transparent;
 $btn-secondary-border:          $dark-grey;
 
-// Bootstrap overrides for `<body>`
-$body-bg:               $white;
-// Bootstrap overrides for text color on `<body>`
-$text-color:            $dark-grey;
-
 // Bootstrap typography overrides
 $font-family-sans-serif:  'Open Sans', sans-serif;
 $font-family-base:        $font-family-sans-serif;
-
 $font-size-base:          14px;
-// $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-// $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-h1:            floor(($font-size-base * 2.28)); // ~32px
 $font-size-h2:            floor(($font-size-base * 1.7)); // ~24px
@@ -66,42 +57,22 @@ $btn-font-size:           floor(($font-size-base * 1.14)); // ~16px
 $default-transition: .15s ease-out;
 
 // Bootstrap modals overrides
-// Padding applied to the modal body
-$modal-inner-padding:           0;
-// Padding applied to the modal title
-$modal-title-padding:           80px 0 0 0;
-// Modal title line-height
-// $modal-title-line-height:     $line-height-base !default;
-// Background color of modal content area
-$modal-content-bg:                             $white; //
-// Modal content border color
-$modal-content-border-color:                   none; //
-// Modal content border color **for IE8**
-$modal-content-fallback-border-color:          none; //
-// Modal backdrop background color
-$modal-backdrop-bg:             #000 !default;
-// Modal backdrop opacity
-$modal-backdrop-opacity:        .5 !default; 
-// Modal header border color
-$modal-header-border-color:     none; //
-// Modal footer border color
-$modal-footer-border-color:     $modal-header-border-color !default;
-// Modal large size
-$modal-lg:                      940px;
-// Changing modal backdrop z-index so that the modal appears properly
-$zindex-modal-background:       0;
+$modal-inner-padding:                   0;
+$modal-title-padding:                   80px 0 0 0;
+$modal-content-bg:                      $white;
+$modal-content-border-color:            none;
+$modal-content-fallback-border-color:   none; // **for IE8**
+$modal-header-border-color:             none;
+$modal-lg:                              940px;
+$zindex-modal-background:               0;
+// Remove Modal borders' radius
+$border-radius-none:                    0;
 
 // Bootstrap carousel overrides
-$carousel-bg:                        $dark-grey;
-$carousel-text-shadow:                        none;
-
-$carousel-control-color:                      $white;
-$carousel-control-width:                      15% !default;
-$carousel-control-opacity:                    .5 !default;
-$carousel-control-font-size:                  20px !default;
-
-$carousel-indicator-active-bg:                $white;
-$carousel-indicator-border-color:             $white;
-
-$carousel-caption-color:                      $white;
+$carousel-bg:                       $dark-grey;
+$carousel-text-shadow:              none;
+$carousel-control-color:            $white;
+$carousel-indicator-active-bg:      $white;
+$carousel-indicator-border-color:   $white;
+$carousel-caption-color:            $white;
 
