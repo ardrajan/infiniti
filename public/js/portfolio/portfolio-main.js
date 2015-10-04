@@ -38,9 +38,8 @@
         }
         ];
 
-        var index;
-
         // Load main images
+        var index;
         for(index=1; index<=3; index++) {
             manifest.push({src:"public/img/00"+index+".png"});
         }
