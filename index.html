@@ -10,8 +10,10 @@
         <meta name="description" content="Portfolio of Dharmarajan Ayakkad">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Compiled Portfolio Stylesheets -->
+
+        <!-- Portfolio Stylesheets -->
         <link rel="stylesheet" href="public/css/theme.css">
+        
         <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -28,14 +30,15 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Preloader -->
+        <!-- Preloader (With Animation) -->
         <div id="preloader-container">
             <div id="breathe-preloader"></div>
         </div> <!-- Preloader -->
-
+        
+        <!-- Portfolio Wrapper -->
         <div id="portfolio-wrapper">
         
-            <!-- Vertical navigation -->
+            <!-- Vertical Navigation -->
             <nav id="cd-vertical-nav">
                 <ul>
                     <li>
@@ -57,7 +60,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#about-website" data-number="4">
+                        <a href="#website-design-development" data-number="4">
                             <span class="cd-dot"></span>
                             <span class="cd-label">Website Design and Development</span>
                         </a>
@@ -75,11 +78,10 @@
                         </a>
                     </li>
                 </ul>
-            </nav> <!-- Vertical navigation -->
+            </nav> <!-- Vertical Navigation -->
 
-            <!-- Modal - Recent Projects -->
+            <!-- Modal For Recent Projects -->
             <section id="modal-recent-projects">
-                <!-- Modal -->
                 <div class="modal fade" id="projectCardModal" tabindex="-1" role="dialog" aria-labelledby="projectCardModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
@@ -87,18 +89,21 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <h1 class="modal-title text-center" id="projectCardModalLabel">Modal title</h1>
                             </div>
+
+                            <!-- Content will be added in modal-body from the Handlebars template - 'project-card-details-template' -->
                             <div class="modal-body">
                             </div>
+                            
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-lg btn-secondary center-block" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> <!-- Modal - Recent Projects -->
+            </section> <!-- Modal For Recent Projects -->
             
             <!-- About Section -->
-            <section id="about" class="cd-section">
+            <section id="about">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
@@ -107,46 +112,48 @@
                                 <h2 class="text-uppercase text-center">I care about <span class="emphasis">human</span> experiences...</h2>
                                 <h3 class=" text-center">...and I work at the point where people, design, art and technology converge to create compelling stories and thoughtful, delightful experiences.</h3>
                             </header>
-                            <!-- Journey Details -->
+
+                            <!-- Journey details -->
                             <section id="journey-details" class="wrapper">
                                 <h3 class="text-center">I love looking at the <span class="emphasis">big picture</span> and collaborating with stakeholders on a <span class="emphasis">journey</span> to a place, where solutions, based on the needs of the most important members of the journey – <br/><span class="emphasis">the users</span>, come into sharp focus.</h3>
                                 <br/>
                                 <h3 class="text-center">This journey consists of user research, design workshops, documentation, wireframing and prototyping, iterative testing, visual design, and front-end development. </h3>
-                            </section> <!-- Journey Details -->
+                            </section> <!-- Journey details -->
                         </div>
                     </div>
                 </div>
             </section> <!-- About Section -->
 
-            <!-- One Journey -->
-            <section id="one-journey" class="cd-section cardboard">
+            <!-- One Example (Case Study) Section -->
+            <section id="one-journey" class="cardboard">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <!-- <div class="wrapper"> -->
-                                <h1 class="text-uppercase text-center">One such example</h1>
-                                <a href="#" id="case-study-image" data-toggle="modal" data-target="#projectCardModal">
-                                    <img src="public/img/002.png" alt="Portfolio Logo" class="center-block">    
-                                </a>
-                                <h3 class="text-center">Early childhood assessment software in English and Spanish <br/>for pre-kindergarten.</h3>
-                                <button id="case-study-button" type="button" class="btn btn-lg btn-primary center-block" data-toggle="modal" data-target="#projectCardModal">View Case Study</button>
-                            <!-- </div> -->
+                            <h1 class="text-uppercase text-center">One such example</h1>
+                            <a href="#" id="case-study-image" data-toggle="modal" data-target="#projectCardModal">
+                                <img src="public/img/002.png" alt="Portfolio Logo" class="center-block">
+                            </a>
+                            <h3 class="text-center">Early childhood assessment software in English and Spanish <br/>for pre-kindergarten.</h3>
+                            <button id="case-study-button" type="button" class="btn btn-lg btn-primary center-block" data-toggle="modal" data-target="#projectCardModal">View Case Study</button>
                         </div>
                     </div>
                 </div>
-            </section> <!-- One Journey -->
+            </section> <!-- One Example (Case Study) Section -->
             
-            <!-- Case Study -->
+            <!-- Case Study (Modal Content) Section -->
+            <!-- Content to be attached to the modal for the case study  -->
             <section id="case-study">
                 <div class="container-fluid">
                     <div class="row">
                         <div>
                             <img src="public/img/case/001.png" alt="mCLASS:CIRCLE Image" class="img-responsive">
                         </div>
+
                         <div class="col-xs-10 col-xs-offset-1">
                             <h2>mCLASS:CIRCLE is an early childhood assessment software in English and Spanish for pre-kindergarten.</h2>
                             <h3><em>To comply with my non-disclosure agreement, I have omitted or obfuscated confidential information in this case study. Some of the information presented in this case study is my own, and does not necessarily reflect the views of Amplify.</em></h3>
                         </div>
+
                         <div class="col-xs-10 col-xs-offset-1">
                             <h2 class="text-uppercase">Business Requirement</h2>
                             <p class="h3">The assessments available under mCLASS:CIRCLE were traditionally administered using paper and pencil, and the data was analyzed manually. The original mCLASS:CIRCLE application was available in two parts. Individual assessment of students was administered using a standalone application that ran on a number of devices running the Microsoft Windows OS. Results were synced, and aggregate reporting and instructional next steps were available through a web portal, optimized for desktop browsers.
@@ -183,7 +190,6 @@
                                     <p class="h3">Support front-end effort</p>
                                 </li>
                             </ul>
-                            <!-- INSERT TIMELINE  -->
                         </div>
                         
                         <div class="col-xs-10 col-xs-offset-1">
@@ -313,23 +319,23 @@
                             <p class="h3">mCLASS:CIRCLE successfully launched for the school year 2014-2015 across multiple states in the US.</p>
                             <p class="h2"><span class="text-uppercase">External site:</span><a class="text-lowercase" href="http://www.amplify.com/assessment/mclass-circle " target="_blank">   www.amplify.com/circle</a></p>
                         </div>
-
-                    </div> <!-- row -->
+                    </div>
                 </div>
-            </section> <!-- Case Study -->
+            </section> <!-- Case Study (Modal Content) Section -->
 
-            <!-- Recent Projects -->
-            <section id="recent-projects" class="cardboard cd-section">
+            <!-- Recent Projects Section -->
+            <section id="recent-projects" class="cardboard">
                 <div class="container">
                     <div class="row">
                         <h1 class="text-uppercase text-center">Recent projects</h1>
+                        <!-- Content will be added from the Handlebars template - 'project-card-template' -->
                         <div class="projects-grid"></div>
                     </div>
                 </div>
-            </section> <!-- Recent Projects -->
+            </section> <!-- Recent Projects Section -->
             
-            <!-- About Website -->
-            <section id="about-website" class="cardboard cd-section">
+            <!-- Website Design and Development Section -->
+            <section id="website-design-development" class="cardboard">
                 <div class="container">
                     <div class="row">
                         <h1 class="text-uppercase text-center">Website Design And Development</h1>
@@ -339,10 +345,10 @@
                         <a href="https://github.com/ardrajan/infiniti" class="btn btn-lg btn-secondary center-block" role="button" target="_blank">View Source on Github</a>
                     </div>
                 </div>
-            </section> <!-- Recent Projects -->
+            </section> <!-- Website Design and Development Section -->
 
-            <!-- Tools -->
-            <section id="tools" class="cd-section cardboard">
+            <!-- Skills Section -->
+            <section id="tools" class="cardboard">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
@@ -430,10 +436,10 @@
                         </div>
                     </div>
                 </div>
-            </section> <!-- Tools -->
+            </section> <!-- Skills Section -->
 
-            <!-- Contact -->
-            <footer id="contact" class="cardboard cd-section">
+            <!-- Contact Section -->
+            <footer id="contact" class="cardboard">
                 <div class="container">
                     <div class="row">
                         <h1 class="text-uppercase text-center">Get in touch</h1>
@@ -448,11 +454,10 @@
                         </div>
                     </div>
                 </div>
-            </footer> <!-- Contact -->
-
+            </footer> <!-- Contact Section -->
         </div> <!-- Portfolio wrapper -->
 
-        <!-- Handlebars template for the project cards grid in Recent Projects -->
+        <!-- Handlebars Template For The Project Cards Grid In Recent Projects Section -->
         <script id="project-card-template" type="text/x-handlebars-template">
             {{#each portfolioProjects}}
                 <div class="col-sm-6 col-md-4">
@@ -470,20 +475,20 @@
                     </div>
                 </div>
             {{/each}}
-        </script>
+        </script> <!-- Handlebars Template For The Project Cards Grid In Recent Projects Section -->
 
-        <!-- Handlebars template for the details in the modal body -->
+        <!-- Handlebars Template For Project Details In The Modal Body -->
         <script id="project-card-details-template" type="text/x-handlebars-template">
-            <!-- Carousel -->
+            {{!Carousel}}
             <div id="carousel-portfolio" class="carousel slide" data-interval="false">
-                <!-- Indicators -->
+                {{!Indicators}}
                 <ol class="carousel-indicators">
                     {{#each largeImage}}
                         <li data-target="#carousel-portfolio" data-slide-to="{{@index}}" {{#if @first}}class="active"{{/if}}></li>
                     {{/each}}
-                </ol> <!-- Indicators -->
+                </ol> {{!Indicators}}
 
-                <!-- Wrapper for slides -->
+                {{!Wrapper for slides}}
                 <div class="carousel-inner">
                     {{#each largeImage}}
                         <div class="item {{#if @first}}active{{/if}}">
@@ -499,18 +504,18 @@
                             </div>
                         </div>
                     {{/each}}
-                </div> <!-- Wrapper for slides -->
+                </div> {{!Wrapper for slides}}
 
-                <!-- Controls -->
+                {{!Controls}}
                 <a class="left carousel-control" href="#carousel-portfolio" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
                 <a class="right carousel-control" href="#carousel-portfolio" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
-            </div> <!-- Carousel -->
+            </div> {{!Carousel}}
 
-            <!-- Project details -->
+            {{!Project details}}
             <div class="project-details">
                 <p class="h2"><span class="project-description">{{description}}</span></p>
                 <p class="h2"><span class="text-uppercase">Role:</span><span class="text-capitalize"> {{role}}</span></p>
@@ -527,14 +532,15 @@
                         <p class="h2"><span class="text-uppercase">External site:</span><a href={{url}} target="_blank">   {{sitename}}</a></p>
                     {{/each}}
                 {{/if}}
-            </div> <!-- Project details -->
-        </script>
+            </div> {{!Project details}}
+        </script> <!-- Handlebars Template For Project Details In The Modal Body -->
+        
+        <!-- Javascript -->
         <script src="public/js/vendor/jquery/jquery-1.11.2.min.js"></script>
         <script src="public/js/vendor/bootstrap/bootstrap.min.js"></script>
         <script src="public/js/vendor/handlebars/handlebars-v4.0.2.js"></script>
         <script src="public/js/vendor/vertical-navigation/main.js"></script>
-        <!--<script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script> -->
-        <script src="public/js/vendor/preloadjs/preloadjs-0.6.1.min.js"></script>
+        <script src="https://code.createjs.com/preloadjs-0.6.1.min.js"></script> 
         <script src="public/js/portfolio/portfolio-main.js"></script>
     </body>
 </html>
