@@ -105,7 +105,7 @@
 
     /*
      * Function to setup the project cards in the 'Recent Projects' section using Handlebars template
-     * and assign click events to each of the cards.
+     * and assign click events to each of the cards
      */
     function setupRecentProjects () {
         // Grab the template script 'project-card-template'
@@ -155,8 +155,11 @@
         // Set the modal title
         modalTitle.text('mCLASS:CIRCLE');
         // Show the case study section and attach it to the modal body
+        // Not using Handlebars since all the info is static text
         caseStudySection.show();
         modalBody.html(caseStudySection);
+        // Click event for the close icon to hide the case study section, and remove the click event
+        // for the close button since this click event is used only when attaching the case study
         modalCloseButton.on('click', function() {
             caseStudySection.hide();
             $(this).off('click');
