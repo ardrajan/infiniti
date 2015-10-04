@@ -6,11 +6,27 @@
     var caseStudySection = $('#case-study');
     var modalCloseButton = $('.close');
     var breathePreloader = $('#preloader-container');
+
+    // Variable for holding JSON data
     var projectData;
+
+    // Variables for preloading
     var manifest;
     var preload;
 
     // Function to setup the assets manifest
+    setupManifest();
+    // Function to begin preloading
+    startPreload();
+
+    // Click event for the case study button to show the case study details
+    $('#case-study-button').on('click', caseStudyModal);
+    // Click event for the case study image to show the case study details
+    $('#case-study-image').on('click', caseStudyModal);
+
+    /*
+     * Function to setup the assets manifest
+     */
     function setupManifest() {
         manifest = [{
             src: 'public/data/projects.json',
@@ -48,63 +64,68 @@
         manifest.push({src:"public/img/case/000.gif"});
     }
 
+    /*
+     * Function to begin preloading
+     */  
     function startPreload() {
         preload = new createjs.LoadQueue(true);      
         preload.on("fileload", handleFileLoad);
-        preload.on("progress", handleFileProgress);
         preload.on("complete", loadComplete);
         preload.on("error", loadError);
         preload.loadManifest(manifest);
     }
 
+    /*
+     * Function to handling file load
+     */
     function handleFileLoad(event) {
-        console.log("A file has loaded of type: " + event.item.type);
+        // If the preloaded item is the JSON file, assign it to projectData 
         if(event.item.id === 'jsonFile') {
             projectData = jQuery.parseJSON(event.rawResult);
-            console.log(projectData);
         }
     }
 
+    /*
+     * Function to handling file load errors
+     */
     function loadError(evt) {
         console.log("Error!",evt.text);
     }
 
-
-    function handleFileProgress(event) {
-    
-    }
-
+    /*
+     * Function to handling file load completion
+     */
     function loadComplete(event) {
-        console.log("Finished Loading Assets");
+        // Hide the preloader animation and show the portfolio
         breathePreloader.fadeOut(1000, function() {
             $('#portfolio-wrapper').fadeIn(500);
             setupRecentProjects();
         });
     }
-    setupManifest();
-    startPreload();
 
+    /*
+     * Function to setup the project cards in the 'Recent Projects' section using Handlebars template
+     * and assign click events to each of the cards.
+     */
     function setupRecentProjects () {
-        console.log('JSON fetch successful');
-
-        // Grab the template script
+        // Grab the template script 'project-card-template'
         var projectCardTemplateScript = $("#project-card-template").html();
 
-        // Compile the template
+        // Compile the template 'project-card-template'
         var projectCardTemplate = Handlebars.compile(projectCardTemplateScript);
 
-        //Pass our data to the template
+        //Pass the JSON data to the template 'project-card-template'
         var projectCardCompiledHtml = projectCardTemplate(projectData);
 
-        // Add the compiled html to the page
+        // Add the compiled html to the 'project-grid' div
         projectsGrid.html(projectCardCompiledHtml);
 
-        // Hover state to show the project info
+        // Show the project info on hover state of each project card
         $('.project-card').hover(function () {
             $(this).find('.project-info').toggleClass('show');
         });
 
-        // Click event for getting JSON data corresponding clicked element
+        // Click event for the project-card for showing that project's details
         projectsGrid.on('click', '.project-card', function(e) {
             // Get the index of the parent of the clicked element
             var index = $(this).parent().index();
@@ -113,32 +134,32 @@
              // Set project title
             modalTitle.text(clickedCardData.title);
 
-            // Grab the template script for the modal body
+            // Grab the template script 'project-card-details-template'
             var projectCardDetailsTemplateScript = $("#project-card-details-template").html();
 
-            // Compile the template
+            // Compile the template 'project-card-details-template'
             var projectCardDetailsTemplate = Handlebars.compile(projectCardDetailsTemplateScript);
 
-            // Pass our data to the template (corresponding to clicked card)
+            // Pass the JSON data (corresponding to clicked card) to the template 
             var projectCardDetailsCompiledHtml = projectCardDetailsTemplate(clickedCardData);
 
             // Add the compiled html to the modal body
             modalBody.html(projectCardDetailsCompiledHtml);
         });
-    
-        // Click event for attaching the case study details when the case study button or image is clicked
-        $('#case-study-button').on('click', caseStudyModal);
-        $('#case-study-image').on('click', caseStudyModal);
+    }
 
-        // Function to show the modal with case study details
-        function caseStudyModal () {
-            modalTitle.text('mCLASS:CIRCLE');
-            caseStudySection.show(300);
-            modalBody.html(caseStudySection);
-            modalCloseButton.on('click', function() {
-                caseStudySection.hide(300);
-                $(this).off('click');
-            });
-        }
+    /*
+     * Function to show the modal with case study details
+     */
+    function caseStudyModal () {
+        // Set the modal title
+        modalTitle.text('mCLASS:CIRCLE');
+        // Show the case study section and attach it to the modal body
+        caseStudySection.show();
+        modalBody.html(caseStudySection);
+        modalCloseButton.on('click', function() {
+            caseStudySection.hide();
+            $(this).off('click');
+        });
     }
 }(jQuery));
