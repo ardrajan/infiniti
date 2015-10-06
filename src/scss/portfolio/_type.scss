@@ -3,7 +3,8 @@
 // -----------------------------
 
 // Customize h1 elements
-h1, .h1 {
+h1,
+.h1 {
     font-weight: $font-weight-h1;
     
     &::after {
@@ -17,20 +18,23 @@ h1, .h1 {
 }
 
 // Customize h2 elements
-h2, .h2 {
+h2,
+.h2 {
     line-height: 40px;
     font-weight: $font-weight-h2;
 }
 
 // Customize h3 elements
-h3, .h3 {
+h3,
+.h3 {
     font-family: $h3-font-family;
     font-weight: $font-weight-h3;
     line-height: 34px;
 }
 
 // Customize h4 elements
-h4, .h4 {
+h4,
+.h4 {
     font-family: $h4-font-family;
     font-weight: $font-weight-h4;
 }
@@ -42,11 +46,11 @@ h4, .h4 {
 
 // Customize blockquotes
 blockquote {
-    border-left: none;
+    border-left: 0;
     font-size: 24px;
     color: $dark-grey;
     font-family: 'Merriweather', sans-serif;
-    padding: 10px 120px 0 120px;
+    padding: 10px 120px 0;
     text-align: center;
 
     &:before {
@@ -63,7 +67,7 @@ blockquote {
         content: '';
         display: block;
         height: 2px;
-        margin: 40px auto 40px;
+        margin: 40px auto;
         width: 200px;
     }
 }
@@ -71,6 +75,6 @@ blockquote {
 // Customize blockquote for small devices
 @media (max-width: $screen-xs-max) {
     blockquote {
-        padding: 10px 20px 0 20px;
+        padding: 10px 20px 0;
     }
 }

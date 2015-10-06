@@ -4,8 +4,8 @@
 
 // Class for wrapping content in the center of the screen
 .wrapper {
-    background-color: rgba($white, 0.95);
-    padding: 160px 80px 240px 80px;
+    background-color: rgba($white, .95);
+    padding: 160px 80px 240px;
 }
 
 // Styles for the user login section
@@ -25,17 +25,17 @@
 
 // Container for preloader
 #preloader-container {
-    background-color: rgba($white, 0.9);
+    background-color: rgba($white, .9);
     height: 100vh;
     width: 100%;
 }
 
 // Styles for the preloader
-#breathe-preloader{
+#breathe-preloader {
     animation: breathe_animation 5s infinite linear;
-    background:#000;
-    border-radius:50px;
-    height:30px;
+    background: #000;
+    border-radius: 50px;
+    height: 30px;
     left: calc(50% - 15px);
     position: absolute;
     top: calc(50% - 15px);
@@ -45,10 +45,16 @@
 }
 
 // Animation for the preloader
+@-webkit-keyframes breathe_animation {
+    0%   {transform: rotate(0) scale(.7);}
+    50%  {transform: rotate(180deg) scale(1); background: #3f3f3f;}
+    100% {transform: rotate(360deg) scale(.7);}
+}
+
 @keyframes breathe_animation {
-    0% {transform: rotate(0deg); transform: scale(0.7);}
-    50% {transform: rotate(180deg); transform: scale(1); background:#3f3f3f;}
-    100% {transform: rotate(360deg); transform: scale(0.7);}
+    0%   {transform: rotate(0) scale(.7);}
+    50%  {transform: rotate(180deg) scale(1); background: #3f3f3f;}
+    100% {transform: rotate(360deg) scale(.7);}
 }
 
 // Styles for about section
@@ -77,8 +83,10 @@
         height: auto;
     }
 
-    h1, .h1,
-    h3, .h3 {
+    h1,
+    .h1,
+    h3,
+    .h3 {
         color: $pastel-brown;
 
         &:after {
@@ -120,7 +128,7 @@
     background: url(../img/003.png) repeat;
 
     h1.text-uppercase {
-        margin: 70px 0 60px 0;
+        margin: 70px 0 60px;
     }
 
     .container {
@@ -132,10 +140,10 @@
 .project-card {
     background: $white;
     height: 300px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 80px;
     max-width: 250px;
     position: relative;
-    @include box-shadow(rgba($black, 0.5) 0px 3px 4px 1px);
+    @include box-shadow(rgba($black, .5) 0 3px 4px 1px);
 
     .h4 {
         display: block;
@@ -157,7 +165,7 @@
     
     // Styles for displaying short info on project card on mouse hover 
     .project-info {
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, .8);
         color: $white;
         height: 200px;
         line-height: 20px;
@@ -165,7 +173,7 @@
         padding: 20px 10px;
         position: absolute;
         top: 0;
-        @include transition(opacity 0.3s);
+        @include transition(opacity .3s);
 
         &.show {
             opacity: 1;
@@ -190,7 +198,7 @@
     background-color: $light-grey;
 
     .wrapper {
-        padding: 80px 20px 240px 20px;
+        padding: 80px 20px 240px;
     }
 
     h1.text-uppercase {
@@ -199,7 +207,7 @@
     
     // Styles for each skill category
     .skills-section {
-        border-bottom: 1px solid rgba($dark-grey, 0.2);
+        border-bottom: 1px solid rgba($dark-grey, .2);
         overflow: auto;
         padding-top: 35px;
         
@@ -210,7 +218,7 @@
         }
 
         &:last-child {
-            border-bottom: none;
+            border-bottom: 0;
         }
     }
 }
@@ -221,8 +229,10 @@
     color: $pastel-brown;
     padding-bottom: 50px;
 
-    h1, .h1,
-    h2, .h2 {
+    h1,
+    .h1,
+    h2,
+    .h2 {
         color: $pastel-brown;
     }
 
@@ -239,14 +249,14 @@
 
         &:hover {
             color: $link-hover-color;
-            @include transition(all 0.15s ease-out);
+            @include transition(all .15s ease-out);
         }
     }
 }
 
 // Class for detailed description in the project modal
 .project-details {
-    padding: 0 50px 40px 50px;
+    padding: 0 50px 40px;
 
     h2,
     .h2 {
@@ -260,15 +270,15 @@
 }
 
 // Media queries
-@media(max-width: $screen-xs-max){
+@media(max-width: $screen-xs-max) {
     .wrapper {
-        padding: 160px 20px 240px 20px;
+        padding: 160px 20px 240px;
     }
 
     #about {
         .wrapper {
             margin-top: 60px;
-            padding: 80px 20px 30px 20px;
+            padding: 80px 20px 30px;
         }
     }
 
