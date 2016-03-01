@@ -518,6 +518,11 @@
             {{!Project details}}
             <div class="project-details">
                 <p class="h2"><span class="project-description">{{description}}</span></p>
+                {{#if website}}
+                    {{#each website}}
+                        <p class="h2"><span class="text-uppercase">External site:</span><a href={{url}} target="_blank">   {{sitename}}</a></p>
+                    {{/each}}
+                {{/if}}
                 <p class="h2"><span class="text-uppercase">Role:</span><span class="text-capitalize"> {{role}}</span></p>
                 <p class="h2 text-uppercase">Work done on this project</p>
                 <ul class="bullet-list">
@@ -527,11 +532,6 @@
                         </li>
                     {{/each}}
                 </ul>
-                {{#if website}}
-                    {{#each website}}
-                        <p class="h2"><span class="text-uppercase">External site:</span><a href={{url}} target="_blank">   {{sitename}}</a></p>
-                    {{/each}}
-                {{/if}}
             </div> {{!Project details}}
         </script> <!-- Handlebars Template For Project Details In The Modal Body -->
         
