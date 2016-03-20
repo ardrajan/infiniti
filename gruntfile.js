@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 src: [
                     'src/js/**/*.js'
                 ],
-                dest: 'public/js/production.js',
+                dest: 'public/js/production-min.js',
             }
         },
 
