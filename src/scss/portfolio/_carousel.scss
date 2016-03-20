@@ -7,6 +7,16 @@
     background-color: $carousel-bg;
 }
 
+// Fix to display images properly in Firefox
+.carousel-inner {
+    > .item {
+        > img,
+        > a > img {
+          max-width: 640px;
+        }
+    }
+}
+
 // Removing gradients for the left and right nav
 .carousel-control {
     &.left,

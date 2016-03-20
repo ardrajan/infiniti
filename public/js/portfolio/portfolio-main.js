@@ -50,7 +50,7 @@
         }
 
         // Load large images for individual projects
-        for(index=1; index<=11; index++) {
+        for(index=1; index<=16; index++) {
             manifest.push({src:"public/img/large/lg_00"+index+".png"});
         }
 

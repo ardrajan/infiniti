@@ -3,8 +3,10 @@ documentation
 .sass-cache
 Mockups
 public/video
-public/css/theme.css.map
+public/css/*.map
 index_login.html
 public/js/vendor/preloadjs
 prod
 old files
+public/js/production-min.js
+src/js/

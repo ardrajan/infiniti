@@ -3,21 +3,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // concat: {
-        //     dist: {
-        //         src: [
-        //             'src/js/**/*.js'
-        //         ],
-        //         dest: 'public/js/production.js',
-        //     }
-        // },
+        concat: {
+            dist: {
+                src: [
+                    'src/js/**/*.js'
+                ],
+                dest: 'public/js/production.js',
+            }
+        },
 
-        // uglify: {
-        //     build: {
-        //         src: 'public/js/portfolio/portfolio-main.js',
-        //         dest: 'public/js/portfolio/portfolio-main.min.js'
-        //     }
-        // },
+        uglify: {
+            build: {
+                src: 'public/js/portfolio/portfolio-main.js',
+                dest: 'public/js/portfolio/portfolio-main.min.js'
+            }
+        },
 
         imagemin: {
             dynamic: {
