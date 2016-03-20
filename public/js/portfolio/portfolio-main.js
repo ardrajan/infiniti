@@ -55,7 +55,7 @@
         }
 
         // Load small images for individual projects
-        for(index=1; index<=4; index++) {
+        for(index=1; index<=6; index++) {
             manifest.push({src:"public/img/small/sm_00"+index+".png"});
         }
 
